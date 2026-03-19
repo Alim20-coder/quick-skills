@@ -1,0 +1,321 @@
+:root {
+    --text-blue: #0d2235;
+    --text-orange: #ff9f1c;
+    --btn-orange: #ffb703;
+    --bg-dark-navy: #0d2235;
+    --bg-soft-gray: #f4f7f9;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--bg-soft-gray);
+    color: var(--text-blue);
+}
+
+.text-blue { color: #0d2235; }
+.text-orange { color: #ff9f1c; }
+
+.btn-contact {
+    background-color: #ffb703;
+    transition: 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #ff9f1c;
+    transform: translateY(-2px);
+}
+
+.nav-link:hover {
+    color: #ff9f1c !important;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav { text-align: center; }
+    .nav-item { padding: 10px 0; }
+}
+/* nav end ------------------------------------- */
+.hero-section {
+    min-height: 85vh;
+    background: linear-gradient(135deg, rgba(13, 34, 53, 0.8), rgba(13, 34, 53, 0.6)), 
+                url('./Photos/hero.PNG') center/cover no-repeat;
+}
+
+.text-orange { color: #ff9f1c !important; }
+
+.btn-orange-main {
+    background-color: #ffb703;
+    color: #0d2235;
+    transition: 0.4s;
+}
+
+.btn-orange-main:hover {
+    background-color: #ff9f1c;
+    transform: translateY(-3px);
+}
+
+.btn-outline-light:hover {
+    background-color: #0d2235;
+    border-color: #0d2235;
+    transform: translateY(-3px);
+}
+
+.animate-up, .animate-up-1, .animate-up-2, .animate-up-3 {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.animate-up-1 { animation-delay: 0.2s; }
+.animate-up-2 { animation-delay: 0.4s; }
+.animate-up-3 { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+} 
+/* hero end ---------------------------------------- */
+
+.section-title {
+    color: var(--text-blue);
+    font-family: 'Cairo', sans-serif;
+}
+
+.title-underline {
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.bg-orange { background-color: var(--text-orange); }
+
+/* تنسيقات الكروت */
+.card-title { color: var(--text-blue); }
+.text-orange { color: var(--text-orange); }
+.border-top-orange { border-top: 4px solid var(--text-orange) !important; }
+
+.project-item {
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.05);     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.project-img {
+    height: 85px; 
+        width: 100%;
+    object-fit: cover; 
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 34, 53, 0.85); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 600;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1; 
+}
+
+
+.animate-right, .animate-left, .animate-up-1, .animate-up-2, .animate-up-3 {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-right { animation-delay: 0.1s; }
+.animate-left { animation-delay: 0.2s; }
+.animate-up-1 { animation-delay: 0.3s; }
+.animate-up-2 { animation-delay: 0.4s; }
+.animate-up-3 { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --------------------------------------------------------------Second End  */
+
+.Arabic {
+    font-family: 'Cairo', sans-serif;
+}
+
+.services-section {
+    background-color: #e9ecef !important;
+}
+
+.section-title {
+    color: var(--text-blue);
+}
+
+.title-underline {
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--text-orange);
+}
+
+.service-card {
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+    background-color: var(--bg-dark-navy);
+}
+
+.service-card:hover .service-icon,
+.service-card:hover .card-title,
+.service-card:hover p {
+    color: #ffffff !important;
+}
+
+.service-card:hover .service-icon {
+    color: var(--text-orange) !important;
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--text-blue);
+}
+
+.card-title {
+    color: var(--text-blue);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+.delay-7 { transition-delay: 0.7s; }
+.delay-8 { transition-delay: 0.8s; }
+ /* three end ----------------------------------------------------------------------------- */
+.text-orange { color: #ff9f1c !important; }
+
+.project-card {
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-bottom: 5px solid #ff9f1c !important;
+}
+
+.project-info strong {
+    color: #0d2235;
+}
+
+.Arabic {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* four end --------------------------------------------------------------- */
+.partner-wrapper {
+    height: 110px;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.partner-wrapper:hover {
+    transform: scale(1.1);
+    border-color: #ff9f1c !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+}
+
+.partner-img {
+    max-height: 70px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.partner-wrapper:hover .partner-img {
+    filter: grayscale(0%);
+}
+
+
+
+/* footer end  */
+
+.footer-main {
+    background-color: #081623 !important;
+    color: #ffffff;
+}
+
+.text-orange { color: #ff9f1c !important; }
+.bg-orange { background-color: #ff9f1c !important; }
+.btn-orange { 
+    background-color: #ff9f1c; 
+    color: #000;
+    transition: 0.3s;
+}
+.btn-orange:hover { background-color: #e68a00; color: #fff; }
+
+.footer-links li a {
+    color: #cbd5e0;
+}
+
+.footer-links li a:hover {
+    color: #ff9f1c !important;
+    padding-right: 5px;
+    transition: 0.3s;
+}
+
+/* الأيقونات العائمة */
+.floating-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+
+.whatsapp-btn, .phone-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s transform;
+}
+
+.whatsapp-btn { background-color: #25d366; }
+.phone-btn { background-color: #ffc107; }
+
+.whatsapp-btn:hover, .phone-btn:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+.Arabic { direction: rtl; }

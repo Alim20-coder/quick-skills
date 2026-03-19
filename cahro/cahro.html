@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="mep_page_title">الأعمال الكهروميكانيكية MEP | QSC</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --mep-blue: #004e92; --mep-silver: #e0e0e0; --mep-orange: #ff9f1c; }
+        body { font-family: 'Cairo', sans-serif; background-color: #fff; }
+
+        .mep-hero {
+            background: linear-gradient(rgba(0, 78, 146, 0.9), rgba(0, 78, 146, 0.9)), 
+                        url('https://images.unsplash.com/photo-1558389186-438424b00a32?q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .mep-card { border: 1px solid #eee; border-radius: 15px; transition: 0.4s ease; position: relative; overflow: hidden; }
+        .mep-card:hover { transform: translateY(-10px); border-color: var(--mep-orange); box-shadow: 0 15px 35px rgba(0, 78, 146, 0.1) !important; }
+        .mep-card i { font-size: 3rem; color: var(--mep-blue); margin-bottom: 20px; transition: 0.3s; }
+        .mep-card:hover i { color: var(--mep-orange); transform: rotateY(180deg); }
+        .service-list li { font-size: 0.9rem; margin-bottom: 8px; color: #555; }
+        
+        #lang-toggler { position: fixed; top: 20px; left: 20px; z-index: 1000; }
+        .bg-orange { background-color: var(--mep-orange) !important; }
+        .text-orange { color: var(--mep-orange) !important; }
+        .bg-blue { background-color: var(--mep-blue) !important; }
+    </style>
+</head>
+<body>
+<style>
+    .text-orange-hover:hover { color: #ff9f1c !important; transition: 0.3s; }
+    .transition-hover:hover { transform: translateY(-2px); transition: 0.3s; background-color: #ff9f1c; border-color: #ff9f1c; color: #0d2235; }
+    
+    @media (max-width: 991px) {
+        .border-start { border-right: none !important; border-top: 1px solid #ff9f1c; padding-top: 15px; margin-top: 10px; border-left: none !important; }
+        .navbar-nav { text-align: center; }
+        .navbar-nav li { margin-bottom: 10px; }
+    }
+</style>    
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm py-3" style="background-color: #0d2235; border-bottom: 3px solid #ff9f1c;">
+    <div class="container">
+        
+        <a class="navbar-brand me-0" href="index.html">
+            <img src="../logo.jpeg" alt="Logo" width="50" height="50" class="img-fluid rounded shadow-sm">
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-bold d-flex align-items-center">
+                <li class="nav-item px-3">
+                    <a class="nav-link text-white text-orange-hover" href="../index.html">الرئيسية</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link text-white text-orange-hover" href="../index.html#services">خدماتنا</a>
+                </li>
+                <li class="nav-item px-3 mt-2 mt-lg-0">
+                    <button id="lang-toggler" class="btn btn-light btn-sm fw-bold rounded-pill px-3 shadow-sm transition-hover">
+                        English
+                    </button>
+                </li>
+            </ul>
+
+            <div class="d-flex align-items-center border-start border-warning ps-3 ms-lg-3">
+                <div class="text-start">
+                    <span class="d-block fw-bolder text-white lh-1 mb-1" style="letter-spacing: 1px;">Quick Skills</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
+    <button id="lang-toggler" class="btn btn-light shadow-sm fw-bold">English</button>
+
+    <header class="mep-hero text-center">
+        <div class="container reveal">
+            <h1 class="display-4 fw-black mb-3" data-i18n="mep_hero_h1">حلول الكهروميكانيك (MEP)</h1>
+            <p class="lead" data-i18n="mep_hero_p">نحن نبض المبنى.. نصمم وننفذ الأنظمة الحيوية التي تجعل المنشأة تعمل بكفاءة وذكاء.</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container py-lg-5">
+            <div class="row g-4 justify-content-center">
+                
+                <div class="col-lg-4 col-md-6 reveal delay-1">
+                    <div class="card mep-card h-100 p-4 shadow-sm">
+                        <div class="text-center">
+                            <i class="fas fa-bolt-lightning"></i>
+                            <h4 class="fw-bold mb-3" data-i18n="mep_elec_h">الأنظمة الكهربائية</h4>
+                        </div>
+                        <ul class="list-unstyled service-list">
+                            <li><i class="fas fa-check text-orange ms-2"></i> <span data-i18n="mep_elec_1">لوحات التوزيع والجهد المنخفض.</span></li>
+                            <li><i class="fas fa-check text-orange ms-2"></i> <span data-i18n="mep_elec_2">أنظمة الإنارة الداخلية والخارجية.</span></li>
+                            <li><i class="fas fa-check text-orange ms-2"></i> <span data-i18n="mep_elec_3">المولدات وأنظمة التيار الخفيف.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 reveal delay-2">
+                    <div class="card mep-card h-100 p-4 shadow-sm">
+                        <div class="text-center">
+                            <i class="fas fa-wind"></i>
+                            <h4 class="fw-bold mb-3" data-i18n="mep_hvac_h">أنظمة HVAC</h4>
+                        </div>
+                        <ul class="list-unstyled service-list">
+                            <li><i class="fas fa-check text-orange ms-2"></i> <span data-i18n="mep_hvac_1">أنظمة التكييف المركزي والـ VRF.</span></li>
+                            <li><i class="fas fa-check text-orange ms-2"></i> <span data-i18n="mep_hvac_2">شبكات التهوية ومجاري الهواء (Duct).</span></li>
+                            <li><i class="fas fa-check text-orange ms-2"></i> <span data-i18n="mep_hvac_3">أنظمة التحكم في الحرارة والرطوبة.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 reveal delay-3">
+                    <div class="card mep-card h-100 p-4 shadow-sm">
+                        <div class="text-center">
+                            <i class="fas fa-faucet-drip"></i>
+                            <h4 class="fw-bold mb-3" data-i18n="mep_plumb_h">السباكة ومكافحة الحريق</h4>
+                        </div>
+                        <ul class="list-unstyled service-list">
+                            <li><i class="fas fa-check text-orange ms-2"></i> <span data-i18n="mep_plumb_1">شبكات تغذية المياه والصرف الصحي.</span></li>
+                            <li><i class="fas fa-check text-orange ms-2"></i> <span data-i18n="mep_plumb_2">أنظمة إطفاء الحريق الآلية (Springlers).</span></li>
+                            <li><i class="fas fa-check text-orange ms-2"></i> <span data-i18n="mep_plumb_3">محطات الرفع ومعالجة المياه.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mt-5 align-items-center g-5">
+                <div class="col-lg-6 reveal">
+                    <h2 class="fw-bold text-blue mb-4" data-i18n="mep_integ_h">تكامل الأنظمة لضمان الأداء</h2>
+                    <p class="text-muted" data-i18n="mep_integ_p">نحن لا نقوم فقط بالتركيب، بل نصمم أنظمة كهروميكانيكية متكاملة تعمل بانسجام تام. نركز على توفير استهلاك الطاقة وسهولة الصيانة المستقبلية لتقليل التكاليف التشغيلية للمالك.</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-orange p-2 rounded-circle ms-3"><i class="fas fa-award text-white"></i></div>
+                        <h6 class="fw-bold mb-0" data-i18n="mep_code_txt">اعتماد الكود العالمي في كافة التصميمات.</h6>
+                    </div>
+                    <a href="https://wa.me/966534656881" class="btn btn-primary bg-blue fw-bold px-5 py-3 mt-4 rounded-pill border-0" data-i18n="mep_cta">اطلب عرض سعر فني</a>
+                </div>
+                <div class="col-lg-6 reveal delay-2">
+                    <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?q=80&w=800" class="img-fluid rounded-4 shadow-lg" alt="MEP Systems">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./cahro.js"></script>
+</body>
+</html>

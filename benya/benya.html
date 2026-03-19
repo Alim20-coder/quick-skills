@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="infra_title">أعمال البنية التحتية | QSC</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --infra-dark: #212529; --infra-orange: #f48c06; --infra-gray: #e9ecef; }
+        body { font-family: 'Cairo', sans-serif; background-color: #fff; }
+
+        .infra-hero {
+            background: linear-gradient(rgba(33, 37, 41, 0.85), rgba(33, 37, 41, 0.85)), 
+                        url('https://images.unsplash.com/photo-1590483734747-394467524837?q=80&w=1200');
+            background-size: cover; background-position: center; color: white; padding: 120px 0;
+        }
+
+        .infra-card {
+            border: none; background: var(--infra-gray); border-radius: 0; 
+            transition: 0.4s; position: relative; overflow: hidden; z-index: 1;
+        }
+
+        .infra-card::before {
+            content: ""; position: absolute; top: 0; right: 0; width: 0; height: 100%;
+            background: var(--infra-orange); transition: 0.4s; z-index: -1;
+        }
+
+        .infra-card:hover::before { width: 100%; }
+        .infra-card:hover h4, .infra-card:hover p, .infra-card:hover i { color: white !important; }
+        .infra-icon { font-size: 2.5rem; color: var(--infra-orange); margin-bottom: 20px; }
+        
+        #lang-toggler { position: fixed; top: 20px; left: 20px; z-index: 1000; }
+        .text-orange { color: var(--infra-orange) !important; }
+    </style>
+</head>
+<body>
+<style>
+    .text-orange-hover:hover { color: #ff9f1c !important; transition: 0.3s; }
+    .transition-hover:hover { transform: translateY(-2px); transition: 0.3s; background-color: #ff9f1c; border-color: #ff9f1c; color: #0d2235; }
+    
+    @media (max-width: 991px) {
+        .border-start { border-right: none !important; border-top: 1px solid #ff9f1c; padding-top: 15px; margin-top: 10px; border-left: none !important; }
+        .navbar-nav { text-align: center; }
+        .navbar-nav li { margin-bottom: 10px; }
+    }
+</style>    
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm py-3" style="background-color: #0d2235; border-bottom: 3px solid #ff9f1c;">
+    <div class="container">
+        
+        <a class="navbar-brand me-0" href="index.html">
+            <img src="../logo.jpeg" alt="Logo" width="50" height="50" class="img-fluid rounded shadow-sm">
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-bold d-flex align-items-center">
+                <li class="nav-item px-3">
+                    <a class="nav-link text-white text-orange-hover" href="../index.html">الرئيسية</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link text-white text-orange-hover" href="../index.html#services">خدماتنا</a>
+                </li>
+                <li class="nav-item px-3 mt-2 mt-lg-0">
+                    <button id="lang-toggler" class="btn btn-light btn-sm fw-bold rounded-pill px-3 shadow-sm transition-hover">
+                        English
+                    </button>
+                </li>
+            </ul>
+
+            <div class="d-flex align-items-center border-start border-warning ps-3 ms-lg-3">
+                <div class="text-start">
+                    <span class="d-block fw-bolder text-white lh-1 mb-1" style="letter-spacing: 1px;">Quick Skills</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
+    <button id="lang-toggler" class="btn btn-light shadow-sm fw-bold">English</button>
+
+    <header class="infra-hero text-center">
+        <div class="container reveal">
+            <h1 class="display-4 fw-black mb-3" data-i18n="infra_hero_h1">أعمال البنية التحتية</h1>
+            <p class="lead" data-i18n="infra_hero_p">نشيد القواعد الأساسية للمدن الحديثة بشبكات متكاملة تضمن استدامة الحياة والخدمات.</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container py-lg-5">
+            <div class="row g-0"> 
+                <div class="col-md-6 col-lg-3 reveal delay-1">
+                    <div class="card infra-card h-100 p-5 border-end border-white text-center">
+                        <i class="fas fa-faucet infra-icon"></i>
+                        <h4 class="fw-bold" data-i18n="infra_water_h">المياه والصرف</h4>
+                        <p class="text-muted small mb-0" data-i18n="infra_water_p">تنفيذ خطوط الطرد، شبكات الانحدار، ومحطات الرفع بأعلى معايير الجودة.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 reveal delay-2">
+                    <div class="card infra-card h-100 p-5 border-end border-white text-center">
+                        <i class="fas fa-bolt infra-icon"></i>
+                        <h4 class="fw-bold" data-i18n="infra_elec_h">شبكات الكهرباء</h4>
+                        <p class="text-muted small mb-0" data-i18n="infra_elec_p">تمديد كابلات الجهد المتوسط والمنخفض، وتركيب المحولات وغرف الكهرباء.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 reveal delay-3">
+                    <div class="card infra-card h-100 p-5 border-end border-white text-center">
+                        <i class="fas fa-broadcast-tower infra-icon"></i>
+                        <h4 class="fw-bold" data-i18n="infra_comm_h">الاتصالات والـ IT</h4>
+                        <p class="text-muted small mb-0" data-i18n="infra_comm_p">تنفيذ مسارات الألياف الضوئية (Fiber Optics) والبنية التحتية للمدن الذكية.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 reveal delay-4">
+                    <div class="card infra-card h-100 p-5 text-center">
+                        <i class="fas fa-road infra-icon"></i>
+                        <h4 class="fw-bold" data-i18n="infra_road_h">الطرق والتمهيد</h4>
+                        <p class="text-muted small mb-0" data-i18n="infra_road_p">أعمال الحفر والردم، تمهيد الطرق، وتجهيز طبقات التأسيس للمشاريع الكبرى.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-lg-5 align-items-center">
+                <div class="col-lg-6 reveal">
+                    <img src="../Styles/Photos/eng.png" class="img-fluid shadow" alt="Infrastructure Construction">
+                </div>
+                <div class="col-lg-6 ps-lg-5 reveal delay-2">
+                    <h2 class="fw-bold mb-4" data-i18n="infra_detail_h">الدقة تحت الأرض.. هي ما يضمن الأمان فوقها</h2>
+                    <p class="text-muted" data-i18n="infra_detail_p">نحن ندرك أن أعمال البنية التحتية هي أصعب مراحل التنفيذ نظراً لتعقيداتها الفنية. لذا نستخدم أحدث معدات الحفر الموجه (HDD) وأجهزة كشف المرافق لضمان تنفيذ الشبكات دون أخطاء أو تداخلات.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-2"><i class="fas fa-check-circle text-orange ms-2"></i> <span data-i18n="infra_f1">الالتزام بالمواصفات القياسية والهندسية.</span></li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-orange ms-2"></i> <span data-i18n="infra_f2">سرعة التنفيذ لتقليل تعطيل المناطق السكنية.</span></li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-orange ms-2"></i> <span data-i18n="infra_f3">استخدام مواد معتمدة تدوم لعقود.</span></li>
+                    </ul>
+                    <a href="https://wa.me/966534656881" class="btn btn-dark btn-lg px-5 mt-4" data-i18n="infra_cta">تواصل مع قسم المشاريع</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./benya.js"></script>
+</body>
+</html>
