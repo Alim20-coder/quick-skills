@@ -3,51 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="ser_6_h">الهندسة الطبية | QSC</title>
+    <title data-i18n="struct_page_title">الأعمال الهيكلية والإنشائية | QSC</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root { --medical-blue: #00a8cc; --dark-navy: #0d2235; --soft-gray: #f4f7f6; }
-        body { font-family: 'Cairo', sans-serif; background-color: var(--soft-gray); }
-        .medical-header {
-            background: linear-gradient(45deg, rgba(13, 34, 53, 0.9), rgba(0, 168, 204, 0.8)), 
-                        url('https://images.unsplash.com/photo-1519494023292-192831046d8f?q=80&w=1200');
+        :root { --struct-orange: #ff9f1c; --struct-navy: #0d2235; --concrete-gray: #f4f7f6; }
+        body { font-family: 'Cairo', sans-serif; background-color: var(--concrete-gray); }
+        
+        .struct-header {
+            background: linear-gradient(45deg, rgba(13, 34, 53, 0.9), rgba(20, 30, 48, 0.7)), 
+                        url('https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=1200'); /* صورة إنشائية احترافية */
             background-size: cover;
             background-position: center;
             color: white;
             padding: 120px 0 80px;
+            border-bottom: 5px solid var(--struct-orange);
         }
-        .feature-card { border: none; border-radius: 20px; transition: 0.4s; overflow: hidden; }
-        .feature-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important; }
-        .medical-icon { font-size: 2.5rem; color: var(--medical-blue); margin-bottom: 20px; }
-        .status-badge { background-color: rgba(0, 168, 204, 0.1); color: var(--medical-blue); padding: 5px 15px; border-radius: 50px; font-size: 0.85rem; font-weight: bold; }
-        /* زرار تبديل اللغة */
-        #lang-toggler { position: fixed; top: 20px; left: 20px; z-index: 1000; }
+        
+        .feature-card { border: none; border-radius: 15px; transition: 0.4s; background: white; }
+        .feature-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(13, 34, 53, 0.15) !important; }
+        
+        .struct-icon { font-size: 2.5rem; color: var(--struct-orange); margin-bottom: 20px; }
+        .status-badge { background-color: var(--struct-orange); color: var(--struct-navy); padding: 5px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 900; }
+        
+        .transition-hover:hover { transform: translateY(-2px); transition: 0.3s; background-color: #ff9f1c; border-color: #ff9f1c; color: #0d2235; }
+        .text-orange-hover:hover { color: #ff9f1c !important; transition: 0.3s; }
+        
+        @media (max-width: 991px) {
+            .border-start { border: none !important; border-top: 1px solid #ff9f1c; padding-top: 15px; margin-top: 10px; }
+            .navbar-nav { text-align: center; }
+        }
     </style>
 </head>
 <body>
- 
 
-<style>
-    .text-orange-hover:hover { color: #ff9f1c !important; transition: 0.3s; }
-    .navbar-toggler { filter: invert(1); } /* عشان يظهر زرار المنيو أبيض على الكحلي */
-</style>
-
-<style>
-    .text-orange-hover:hover { color: #ff9f1c !important; transition: 0.3s; }
-    .transition-hover:hover { transform: translateY(-2px); transition: 0.3s; background-color: #ff9f1c; border-color: #ff9f1c; color: #0d2235; }
-    
-    @media (max-width: 991px) {
-        .border-start { border-right: none !important; border-top: 1px solid #ff9f1c; padding-top: 15px; margin-top: 10px; border-left: none !important; }
-        .navbar-nav { text-align: center; }
-        .navbar-nav li { margin-bottom: 10px; }
-    }
-</style>    
 <nav class="navbar navbar-expand-lg sticky-top shadow-sm py-3" style="background-color: #0d2235; border-bottom: 3px solid #ff9f1c;">
     <div class="container">
-        
-        <a class="navbar-brand me-0" href="index.html">
+        <a class="navbar-brand me-0" href="../index.html">
             <img src="../logo.jpeg" alt="Logo" width="50" height="50" class="img-fluid rounded shadow-sm">
         </a>
 
@@ -57,35 +50,25 @@
 
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-bold d-flex align-items-center">
-                <li class="nav-item px-3">
-                    <a class="nav-link text-white text-orange-hover" href="../index.html">الرئيسية</a>
-                </li>
-                <li class="nav-item px-3">
-                    <a class="nav-link text-white text-orange-hover" href="../index.html#services">خدماتنا</a>
-                </li>
+                <li class="nav-item px-3"><a class="nav-link text-white text-orange-hover" href="../index.html" data-i18n="nav_home">الرئيسية</a></li>
+                <li class="nav-item px-3"><a class="nav-link text-white text-orange-hover" href="../index.html#services" data-i18n="nav_services">خدماتنا</a></li>
                 <li class="nav-item px-3 mt-2 mt-lg-0">
-                    <button id="lang-toggler" class="btn btn-light btn-sm fw-bold rounded-pill px-3 shadow-sm transition-hover">
-                        English
-                    </button>
+                    <button id="lang-toggler" class="btn btn-light btn-sm fw-bold rounded-pill px-4 shadow-sm transition-hover">English</button>
                 </li>
             </ul>
-
             <div class="d-flex align-items-center border-start border-warning ps-3 ms-lg-3">
-                <div class="text-start">
-                    <span class="d-block fw-bolder text-white lh-1 mb-1" style="letter-spacing: 1px;">Quick Skills</span>
-                </div>
+                <span class="fw-bolder text-white">Quick Skills</span>
             </div>
         </div>
-
     </div>
 </nav>
 
-    <header class="medical-header text-center">
+    <header class="struct-header text-center">
         <div class="container">
-            <span class="status-badge mb-3 d-inline-block" data-i18n="medical_badge">حلول طبية متكاملة</span>
-            <h1 class="display-5 fw-bold mb-3" data-i18n="ser_6_h">قسم الهندسة الطبية</h1>
-            <p class="lead mx-auto" style="max-width: 700px;" data-i18n="ser_6_p">
-                نحن متخصصون في تجهيز المنشآت الصحية بأحدث الحلول الهندسية لغرف العمليات، العزل، ووحدات التعقيم وفق المواصفات العالمية.
+            <span class="status-badge mb-3 d-inline-block" data-i18n="struct_badge">تنفيذ، توريد، وإشراف</span>
+            <h1 class="display-5 fw-black mb-3" data-i18n="struct_hero_h">الأعمال الهيكلية والإنشائية</h1>
+            <p class="lead mx-auto" style="max-width: 800px;" data-i18n="struct_hero_p">
+                نبني الأسس المتينة للمشاريع العملاقة، من الهياكل الخرسانية المسلحة إلى المنشآت المعدنية المتطورة بأعلى دقة هندسية.
             </p>
         </div>
     </header>
@@ -95,43 +78,43 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
                     <div class="card feature-card h-100 shadow-sm p-4 text-center">
-                        <div class="medical-icon"><i class="fas fa-microscope"></i></div>
-                        <h4 class="fw-bold text-navy mb-3" data-i18n="medical_op_title">تجهيز غرف العمليات</h4>
-                        <p class="text-muted" data-i18n="medical_op_desc">تصميم وتنفيذ غرف العمليات بنظام الكبسولة (Modular OR) مع التحكم الكامل في تدفق الهواء والضغط.</p>
+                        <div class="struct-icon"><i class="fas fa-cubes"></i></div>
+                        <h4 class="fw-bold text-navy mb-3" data-i18n="struct_conc_h">الخرسانة المسلحة</h4>
+                        <p class="text-muted" data-i18n="struct_conc_p">تنفيذ كافة الأعمال الخرسانية من القواعد والأعمدة والأسقف باستخدام أحدث أنظمة الشدات المعدنية.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="card feature-card h-100 shadow-sm p-4 text-center">
-                        <div class="medical-icon"><i class="fas fa-hospital-user"></i></div>
-                        <h4 class="fw-bold text-navy mb-3" data-i18n="medical_iso_title">وحدات العزل والتعقيم</h4>
-                        <p class="text-muted" data-i18n="medical_iso_desc">تجهيز غرف العزل ذات الضغط السالب ووحدات التعقيم المركزي (CSSD) لضمان أعلى مستويات السلامة.</p>
+                        <div class="struct-icon"><i class="fas fa-gopuram"></i></div>
+                        <h4 class="fw-bold text-navy mb-3" data-i18n="struct_steel_h">المنشآت المعدنية</h4>
+                        <p class="text-muted" data-i18n="struct_steel_p">تصميم وتركيب الهياكل الحديدية (Steel Structure) للمصانع والمستودعات والمباني التجارية.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
                     <div class="card feature-card h-100 shadow-sm p-4 text-center">
-                        <div class="medical-icon"><i class="fas fa-lungs"></i></div>
-                        <h4 class="fw-bold text-navy mb-3" data-i18n="medical_gas_title">شبكات الغازات الطبية</h4>
-                        <p class="text-muted" data-i18n="medical_gas_desc">تصميم وتركيب شبكات الأكسجين والهواء الطبي وأنظمة التشفط المركزية بدقة هندسية متناهية.</p>
+                        <div class="struct-icon"><i class="fas fa-hard-hat"></i></div>
+                        <h4 class="fw-bold text-navy mb-3" data-i18n="struct_earth_h">الحفر والتدعيم</h4>
+                        <p class="text-muted" data-i18n="struct_earth_p">أعمال الحفر والردم وتدعيم جوانب الحفر لضمان سلامة المنشآت المجاورة أثناء التنفيذ.</p>
                     </div>
                 </div>
             </div>
 
             <div class="row mt-5 align-items-center g-5">
-                <div class="col-lg-6 order-lg-2">
-                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800" class="img-fluid rounded-5 shadow-lg" alt="Medical Engineering">
+                <div class="col-lg-6">
+                    <img src="./teb.png" class="img-fluid rounded-4 shadow-lg" alt="Construction Site">
                 </div>
-                <div class="col-lg-6 order-lg-1">
-                    <h2 class="fw-bold mb-4" style="color: var(--dark-navy);" data-i18n="medical_commit_title">التزامنا بالمعايير الطبية</h2>
-                    <p class="text-muted mb-4" data-i18n="medical_commit_desc">في QSC، ندرك أن الخطأ في الهندسة الطبية غير مسموح به. لذلك نلتزم بـ:</p>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4" style="color: var(--struct-navy);" data-i18n="struct_qual_h">قوة التنفيذ وجودة البناء</h2>
+                    <p class="text-muted mb-4" data-i18n="struct_qual_p">في QSC، نلتزم بتسليم مشاريع إنشائية تعيش لعقود، من خلال رقابة صارمة على جودة المواد الموردة وعمليات الصب:</p>
                     <ul class="list-unstyled">
-                        <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-info ms-3 fs-5"></i> <span data-i18n="medical_list_1">معايير مكافحة العدوى العالمية (JCI).</span></li>
-                        <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-info ms-3 fs-5"></i> <span data-i18n="medical_list_2">أنظمة تنقية الهواء عالية الكفاءة (HEPA Filters).</span></li>
-                        <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-info ms-3 fs-5"></i> <span data-i18n="medical_list_3">الأرضيات والحوائط المضادة للبكتيريا والساكنة.</span></li>
+                        <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-warning ms-3 fs-5"></i> <span data-i18n="struct_list_1">استخدام خرسانة معتمدة ومختبرة معملياً.</span></li>
+                        <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-warning ms-3 fs-5"></i> <span data-i18n="struct_list_2">مطابقة المخططات الإنشائية والأكواد الهندسية (SBC).</span></li>
+                        <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-warning ms-3 fs-5"></i> <span data-i18n="struct_list_3">فرق عمل متخصصة في النجارة والحدادة المسلحة.</span></li>
                     </ul>
                     <div class="mt-4">
-                        <a href="https://wa.me/966534656881" class="btn btn-info text-white fw-bold px-4 py-2 rounded-pill" data-i18n="medical_btn">طلب استشارة فنية</a>
+                        <a href="https://wa.me/966534656881" class="btn btn-warning fw-bold px-5 py-3 rounded-pill text-navy" data-i18n="struct_btn">ابدأ مشروعك الإنشائي معنا</a>
                     </div>
                 </div>
             </div>

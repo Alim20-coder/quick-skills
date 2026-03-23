@@ -3,48 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="ser_1_h">الهندسة المعمارية والمدنية | QSC</title>
+    <title data-i18n="ser_1_h">البنية التحتية | QSC</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
-        :root { --civil-blue: #1b263b; --civil-gold: #c29545; --light-bg: #f0f2f5; }
-        body { font-family: 'Cairo', sans-serif; background-color: #fff; }
+        :root { --civil-blue: #0d2235; --civil-gold: #ff9f1c; --light-bg: #f0f2f5; }
+        body { font-family: 'Cairo', sans-serif; background-color: #fff; overflow-x: hidden; }
 
-        .civil-hero {
-            background: linear-gradient(rgba(27, 38, 59, 0.8), rgba(27, 38, 59, 0.8)), 
-                        url('https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=1200');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 120px 0;
+        /* تنسيق زر اللغة الموحد */
+        .lang-btn-style {
+            background-color: #fff;
+            color: #0d2235;
+            border: none;
+            font-weight: 700;
+            border-radius: 50px;
+            padding: 8px 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .lang-btn-style:hover {
+            background-color: var(--civil-gold);
+            color: #fff;
+            transform: translateY(-2px);
         }
 
-        .process-card { border: none; background: var(--light-bg); border-radius: 0; transition: 0.3s; position: relative; }
-        .process-card:hover { background: white; box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important; transform: scale(1.03); }
+        /* Hover Effects for Nav Links */
+        .nav-link { transition: 0.3s; position: relative; }
+        .nav-link::after {
+            content: ''; width: 0; height: 2px; background: var(--civil-gold);
+            position: absolute; bottom: 0; left: 0; transition: 0.3s;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .text-orange-hover:hover { color: var(--civil-gold) !important; }
+
+        /* Responsive Navbar Tweaks */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: #0d2235;
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 15px;
+            }
+            .nav-item { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 10px 0; }
+            .border-start { border: none !important; border-top: 1px solid var(--civil-gold) !important; margin-top: 15px; padding-top: 15px; }
+            .lang-btn-style { width: 100%; margin-top: 10px; }
+        }
+
+        /* Hero & Cards */
+        .infra-hero { padding: 120px 0; }
+        .process-card { border: none; background: var(--light-bg); border-radius: 12px; transition: 0.4s; }
+        .process-card:hover { background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important; transform: translateY(-10px); }
         .process-icon { font-size: 2.5rem; color: var(--civil-gold); margin-bottom: 15px; }
-        .divider-gold { width: 50px; height: 4px; background: var(--civil-gold); margin: 15px auto; }
-        
-        #lang-toggler { position: fixed; top: 20px; left: 20px; z-index: 1000; }
+        .divider-gold { width: 40px; height: 3px; background: var(--civil-gold); margin: 15px auto; }
     </style>
 </head>
 <body>
-<style>
-    .text-orange-hover:hover { color: #ff9f1c !important; transition: 0.3s; }
-    .transition-hover:hover { transform: translateY(-2px); transition: 0.3s; background-color: #ff9f1c; border-color: #ff9f1c; color: #0d2235; }
-    
-    @media (max-width: 991px) {
-        .border-start { border-right: none !important; border-top: 1px solid #ff9f1c; padding-top: 15px; margin-top: 10px; border-left: none !important; }
-        .navbar-nav { text-align: center; }
-        .navbar-nav li { margin-bottom: 10px; }
-    }
-</style>    
+
 <nav class="navbar navbar-expand-lg sticky-top shadow-sm py-3" style="background-color: #0d2235; border-bottom: 3px solid #ff9f1c;">
     <div class="container">
-        
-        <a class="navbar-brand me-0" href="index.html">
-            <img src="../logo.jpeg" alt="Logo" width="50" height="50" class="img-fluid rounded shadow-sm">
+        <a class="navbar-brand me-0" href="../index.html">
+            <img src="../logo.jpeg" alt="Logo" width="55" height="55" class="img-fluid rounded shadow-sm">
         </a>
 
         <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
@@ -53,96 +73,91 @@
 
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-bold d-flex align-items-center">
-                <li class="nav-item px-3">
-                    <a class="nav-link text-white text-orange-hover" href="../index.html">الرئيسية</a>
+                <li class="nav-item px-lg-3">
+                    <a class="nav-link text-white text-orange-hover" href="../index.html" data-i18n="nav_home">الرئيسية</a>
                 </li>
-                <li class="nav-item px-3">
-                    <a class="nav-link text-white text-orange-hover" href="../index.html#services">خدماتنا</a>
+                <li class="nav-item px-lg-3">
+                    <a class="nav-link text-white text-orange-hover" href="../index.html#services" data-i18n="nav_services">خدماتنا</a>
                 </li>
-                <li class="nav-item px-3 mt-2 mt-lg-0">
-                    <button id="lang-toggler" class="btn btn-light btn-sm fw-bold rounded-pill px-3 shadow-sm transition-hover">
-                        English
-                    </button>
+                <li class="nav-item px-lg-3">
+                    <button id="lang-toggler" class="lang-btn-style" data-i18n="nav_rep">English</button>
                 </li>
             </ul>
 
-            <div class="d-flex align-items-center border-start border-warning ps-3 ms-lg-3">
-                <div class="text-start">
-                    <span class="d-block fw-bolder text-white lh-1 mb-1" style="letter-spacing: 1px;">Quick Skills</span>
+            <div class="d-flex align-items-center border-start border-warning ps-lg-3 ms-lg-3 text-center text-lg-start">
+                <div>
+                    <span class="d-block fw-bolder text-white lh-1 mb-1" style="letter-spacing: 1px; font-size: 1.1rem;" data-i18n="brand_name">Quick Skills</span>
                 </div>
             </div>
         </div>
-
     </div>
 </nav>
-    <button id="lang-toggler" class="btn btn-light shadow-sm fw-bold">English</button>
 
-    <header class="civil-hero text-center">
-        <div class="container reveal">
-            <h1 class="display-4 fw-black mb-3" data-i18n="civ_hero_title">الهندسة المعمارية والمدنية</h1>
-            <p class="lead" data-i18n="ser_1_p">من المخططات الورقية إلى الصروح العمرانية.. نبني برؤية هندسية مبتكرة.</p>
-        </div>
-    </header>
+<header class="infra-hero text-center" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1590483736148-68a61622d191?q=80&w=1600') no-repeat center center/cover; color: white;">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3" data-i18n="inf_hero_title">المقاولات العامة والبنية التحتية</h1>
+        <p class="lead opacity-75" data-i18n="inf_hero_desc">نضع الأساس المتين للمستقبل.. تنفيذ شبكات الطرق والمرافق بأعلى معايير الجودة.</p>
+    </div>
+</header>
 
-    <section class="py-5">
-        <div class="container py-lg-5">
-            <div class="row g-4 text-center">
-                
-                <div class="col-md-4 reveal delay-1">
-                    <div class="card process-card h-100 p-4 shadow-sm">
-                        <div class="process-icon"><i class="fas fa-pencil-ruler"></i></div>
-                        <h4 class="fw-bold" data-i18n="civ_arch_title">التصميم المعماري</h4>
-                        <div class="divider-gold"></div>
-                        <p class="text-muted small" data-i18n="civ_arch_desc">تصميمات عصرية تجمع بين استغلال المساحات والجمال البصري مع تقديم مخططات 3D تفصيلية.</p>
-                    </div>
+<section class="py-5 bg-white">
+    <div class="container py-lg-5">
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="card process-card h-100 p-4 shadow-sm">
+                    <div class="process-icon"><i class="fas fa-road"></i></div>
+                    <h4 class="fw-bold" data-i18n="inf_roads_title">شبكات الطرق والأسفلت</h4>
+                    <div class="divider-gold"></div>
+                    <p class="text-muted small" data-i18n="inf_roads_desc">تمهيد ورصف الطرق الداخلية والسريعة، وتجهيز الطبقات الترابية وحماية الميول وفقاً للمواصفات الفنية.</p>
                 </div>
-
-                <div class="col-md-4 reveal delay-2">
-                    <div class="card process-card h-100 p-4 shadow-sm">
-                        <div class="process-icon"><i class="fas fa-monument"></i></div>
-                        <h4 class="fw-bold" data-i18n="civ_const_title">التنفيذ الإنشائي</h4>
-                        <div class="divider-gold"></div>
-                        <p class="text-muted small" data-i18n="civ_const_desc">إشراف وتنفيذ كامل للأعمال الخرسانية والمباني بأعلى معايير الأمان والجودة الإنشائية.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 reveal delay-3">
-                    <div class="card process-card h-100 p-4 shadow-sm">
-                        <div class="process-icon"><i class="fas fa-paint-roller"></i></div>
-                        <h4 class="fw-bold" data-i18n="civ_finish_title">التشطيبات والديكور</h4>
-                        <div class="divider-gold"></div>
-                        <p class="text-muted small" data-i18n="civ_finish_desc">تنفيذ أرقى أنواع التشطيبات الداخلية والخارجية وتسليم المشاريع بنظام "مفتاح".</p>
-                    </div>
-                </div>
-
             </div>
-
-            <div class="row mt-5 align-items-center g-5">
-                <div class="col-lg-6 reveal">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800" class="img-fluid rounded-0 shadow-lg" alt="Construction Site">
+            <div class="col-md-4">
+                <div class="card process-card h-100 p-4 shadow-sm">
+                    <div class="process-icon"><i class="fas fa-tint"></i></div>
+                    <h4 class="fw-bold" data-i18n="inf_water_title">تمديدات المياه والصرف</h4>
+                    <div class="divider-gold"></div>
+                    <p class="text-muted small" data-i18n="inf_water_desc">تنفيذ شبكات مياه الشرب، خطوط الصرف الصحي، وشبكات تصريف مياه الأمطار بكفاءة عالية.</p>
                 </div>
-                <div class="col-lg-6 reveal delay-2">
-                    <h2 class="fw-bold text-blue mb-4" data-i18n="civ_precision_title">الدقة في التنفيذ هي شعارنا</h2>
-                    <p class="text-muted" data-i18n="civ_precision_desc">في QSC، نهتم بأدق التفاصيل الإنشائية لضمان استدامة المبنى. نستخدم أحدث أجهزة الرفع المساحي ونطبق أعلى مواصفات الكود المصري والسعودي في البناء.</p>
-                    <div class="row mt-4 g-3">
-                        <div class="col-6">
-                            <div class="p-3 border-start border-4 border-gold bg-light">
-                                <h6 class="fw-bold" data-i18n="civ_feat_1_title">إشراف هندسي</h6>
-                                <p class="small mb-0" data-i18n="civ_feat_1_desc">مهندسون متخصصون بكل موقع.</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="p-3 border-start border-4 border-gold bg-light">
-                                <h6 class="fw-bold" data-i18n="civ_feat_2_title">جودة المواد</h6>
-                                <p class="small mb-0" data-i18n="civ_feat_2_desc">استخدام أفضل الخامات المعتمدة.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/966534656881" class="btn btn-dark fw-bold px-5 py-3 mt-5 rounded-0" data-i18n="civ_cta_btn">اطلب معاينة لموقعك</a>
+            </div>
+            <div class="col-md-4">
+                <div class="card process-card h-100 p-4 shadow-sm">
+                    <div class="process-icon"><i class="fas fa-snowplow"></i></div>
+                    <h4 class="fw-bold" data-i18n="inf_excav_title">الحفر والردم والتسوية</h4>
+                    <div class="divider-gold"></div>
+                    <p class="text-muted small" data-i18n="inf_excav_desc">أعمال الحفر العميق، نقل التربة، تسوية الموقع العام وتجهيز الأرضيات للمشاريع الصناعية والسكنية.</p>
                 </div>
             </div>
         </div>
-    </section>
+
+        <div class="row mt-5 pt-lg-5 align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img src="./bn.png" class="img-fluid rounded shadow-lg" alt="Infrastructure">
+                    <div style="position:absolute; bottom:-20px; right:-20px; width:100px; height:100px; background:var(--civil-gold); z-index:-1; border-radius:10px;"></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-4" style="color: #0d2235;" data-i18n="inf_precision_title">الجودة في التأسيس هي التزامنا</h2>
+                <p class="text-muted mb-4" data-i18n="inf_precision_desc">في QSC، ندرك أن قوة أي مشروع تبدأ من بنيته التحتية. نلتزم بأعلى مواصفات الجودة ونطبق معايير الأمان الدولية والمحلية.</p>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <div class="p-3 border-start border-4 border-warning bg-light rounded-end">
+                            <h6 class="fw-bold mb-1" data-i18n="inf_feat_1_title">اختبارات المواد</h6>
+                            <p class="small mb-0" data-i18n="inf_feat_1_desc">فحص دقيق للتربة والخرسانة والأسفلت.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-3 border-start border-4 border-warning bg-light rounded-end">
+                            <h6 class="fw-bold mb-1" data-i18n="inf_feat_2_title">الالتزام الزمني</h6>
+                            <p class="small mb-0" data-i18n="inf_feat_2_desc">تسليم المرافق والشبكات في الوقت المحدد.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://wa.me/966534656881" class="btn btn-dark fw-bold px-5 py-3 mt-5 rounded-pill shadow" data-i18n="inf_cta_btn">اطلب دراسة لمشروعك</a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./handasa.js"></script>

@@ -1,51 +1,56 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const translations = {
-        ar: {
-            dir: "rtl",
-            btn_lang: "English",
-            ser_4_h: "نمذجة معلومات البناء BIM | QSC",
-            bim_hero_title: "نمذجة معلومات البناء (BIM)",
-            ser_4_p: "نحول الرؤى المعمارية إلى واقع رقمي ذكي يقلل التكاليف ويمنع التداخلات قبل بدء التنفيذ.",
-            bim_how_title: "كيف نطور مشاريعكم باستخدام تقنية BIM؟",
-            bim_how_desc: "نعتمد في QSC على أحدث البرمجيات مثل (Autodesk Revit, Navisworks) لتوفير دقة متناهية في كافة مراحل المشروع:",
-            bim_feat_1_title: "منع تعارض الأنظمة (Clash Detection)",
-            bim_feat_1_desc: "كشف التداخلات بين الأنظمة الكهربائية والميكانيكية والإنشائية قبل الوصول للموقع.",
-            bim_feat_2_title: "حصر كميات دقيق 100%",
-            bim_feat_2_desc: "استخراج جداول الكميات والتكاليف من النموذج الرقمي مباشرة لضمان أقل نسبة هادر.",
-            bim_dims_title: "مستويات العمل (BIM Dimensions)",
-            bim_dims_desc: "نقدم حلولاً تبدأ من التصميم ثلاثي الأبعاد وصولاً لإدارة المرافق.",
-            bim_3d_title: "النمذجة والتمثيل البصري",
-            bim_3d_desc: "إنشاء نماذج رقمية دقيقة تحتوي على كافة المعلومات الهندسية للمشروع.",
-            bim_4d_title: "الجدولة الزمنية (Time)",
-            bim_4d_desc: "ربط العناصر الإنشائية بالجدول الزمني لمتابعة تسلسل التنفيذ بدقة.",
-            bim_5d_title: "تقدير التكاليف (Cost)",
-            bim_5d_desc: "حساب دقيق للتكاليف والتدفقات النقدية بناءً على حجم العمل الفعلي.",
-            bim_cta_btn: "اطلب نموذجاً لمشروعك الآن"
-        },
-        en: {
-            dir: "ltr",
-            btn_lang: "العربية",
-            ser_4_h: "Building Information Modeling BIM | QSC",
-            bim_hero_title: "Building Information Modeling (BIM)",
-            ser_4_p: "We transform architectural visions into smart digital realities that reduce costs and prevent clashes before execution.",
-            bim_how_title: "How we develop projects using BIM?",
-            bim_how_desc: "At QSC, we rely on the latest software (Autodesk Revit, Navisworks) to provide extreme accuracy at all project stages:",
-            bim_feat_1_title: "Clash Detection",
-            bim_feat_1_desc: "Detecting overlaps between electrical, mechanical, and structural systems before reaching the site.",
-            bim_feat_2_title: "100% Accurate Quantity Surveying",
-            bim_feat_2_desc: "Extracting quantity and cost schedules directly from the digital model to ensure minimal waste.",
-            bim_dims_title: "BIM Dimensions",
-            bim_dims_desc: "We offer solutions starting from 3D design up to facility management.",
-            bim_3d_title: "3D Modeling & Visualization",
-            bim_3d_desc: "Creating precise digital models containing all engineering information for the project.",
-            bim_4d_title: "4D Scheduling (Time)",
-            bim_4d_desc: "Linking structural elements to the schedule to track construction sequence accurately.",
-            bim_5d_title: "5D Cost Estimation",
-            bim_5d_desc: "Precise calculation of costs and cash flows based on actual work volume.",
-            bim_cta_btn: "Request a Model for Your Project Now"
-        }
-    };
-
+const translations = {
+    ar: {
+        dir: "rtl",
+        btn_lang: "English",
+        nav_home: "الرئيسية",
+        nav_services: "خدماتنا",
+        test_page_title: "الاختبار والتشغيل Testing & Commissioning | QSC",
+        test_hero_h: "الاختبار والتشغيل (Commissioning)",
+        test_hero_p: "نحن نضمن أن كل صمام، كابل، ومعدة تعمل بدقة 100% وفقاً للتصاميم الهندسية العالمية قبل التسليم النهائي.",
+        test_badge: "ضمان ومراقبة الجودة QA/QC",
+        test_process_h: "منهجيتنا في فحص الأنظمة",
+        test_process_p: "عملية الـ Commissioning هي الجسر بين الانتهاء من الإنشاء وبدء التشغيل الفعلي. في QSC، نتبع بروتوكولات صارمة تشمل:",
+        test_feat_1_h: "اختبارات ما قبل التشغيل (Pre-commissioning)",
+        test_feat_1_p: "فحص التوصيلات، معايرة الحساسات، واختبارات الضغط (Hydrotest) لضمان سلامة كافة الشبكات.",
+        test_feat_2_h: "مزامنة الأنظمة والتحكم آلياً",
+        test_feat_2_p: "تكامل أنظمة الـ PLC و SCADA لضمان استجابة المعدات للأوامر البرمجية بدقة متناهية.",
+        test_types_h: "خدمات الفحص المتخصصة",
+        test_types_p: "نغطي كافة التخصصات الهندسية لضمان تسليم مشروع متكامل الأركان خالي من العيوب.",
+        test_mech_h: "الاختبارات الميكانيكية",
+        test_mech_p: "اختبار أداء المضخات، الغلايات، والمحركات، والتأكد من عدم وجود اهتزازات أو ضجيج غير طبيعي.",
+        test_elec_h: "الاختبارات الكهربائية",
+        test_elec_p: "قياس الأحمال، اختبار العزل للكابلات، وفحص لوحات الجهد المتوسط والمنخفض وأنظمة الطوارئ.",
+        test_piping_h: "اختبارات الأنابيب",
+        test_piping_p: "اختبار الضغط المائي والهوائي (Hydro & Pneumatic) وتطهير الخطوط (Flushing) قبل التشغيل.",
+        test_cta: "اطلب فريق الفحص والتشغيل الآن"
+    },
+    en: {
+        dir: "ltr",
+        btn_lang: "العربية",
+        nav_home: "Home",
+        nav_services: "Our Services",
+        test_page_title: "Testing & Commissioning | QSC",
+        test_hero_h: "Testing & Commissioning Services",
+        test_hero_p: "We ensure every valve, cable, and equipment functions 100% according to international engineering designs before final handover.",
+        test_badge: "Quality Assurance & Control (QA/QC)",
+        test_process_h: "Our Systems Inspection Methodology",
+        test_process_p: "Commissioning is the bridge between construction completion and actual operation. At QSC, we follow strict protocols including:",
+        test_feat_1_h: "Pre-commissioning Tests",
+        test_feat_1_p: "Checking connections, sensor calibration, and pressure testing (Hydrotest) to ensure network integrity.",
+        test_feat_2_h: "System Sync & Automation Control",
+        test_feat_2_p: "Integrating PLC and SCADA systems to ensure equipment responds perfectly to software commands.",
+        test_types_h: "Specialized Inspection Services",
+        test_types_p: "We cover all engineering disciplines to ensure the delivery of a flawless, integrated project.",
+        test_mech_h: "Mechanical Testing",
+        test_mech_p: "Testing performance of pumps, boilers, and motors, ensuring no abnormal vibrations or noise.",
+        test_elec_h: "Electrical Testing",
+        test_elec_p: "Load measurement, cable insulation testing, and inspection of MV/LV panels and emergency systems.",
+        test_piping_h: "Piping Testing",
+        test_piping_p: "Hydrostatic and Pneumatic pressure testing, and line flushing before initial startup.",
+        test_cta: "Request Commissioning Team Now"
+    }
+};
     const langBtn = document.getElementById('lang-toggler');
     const elementsToTranslate = document.querySelectorAll('[data-i18n]');
 

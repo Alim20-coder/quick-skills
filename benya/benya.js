@@ -1,49 +1,52 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const translations = {
-        ar: {
-            dir: "rtl",
-            btn_lang: "English",
-            infra_title: "أعمال البنية التحتية | QSC",
-            infra_hero_h1: "أعمال البنية التحتية",
-            infra_hero_p: "نشيد القواعد الأساسية للمدن الحديثة بشبكات متكاملة تضمن استدامة الحياة والخدمات.",
-            infra_water_h: "المياه والصرف",
-            infra_water_p: "تنفيذ خطوط الطرد، شبكات الانحدار، ومحطات الرفع بأعلى معايير الجودة.",
-            infra_elec_h: "شبكات الكهرباء",
-            infra_elec_p: "تمديد كابلات الجهد المتوسط والمنخفض، وتركيب المحولات وغرف الكهرباء.",
-            infra_comm_h: "الاتصالات والـ IT",
-            infra_comm_p: "تنفيذ مسارات الألياف الضوئية (Fiber Optics) والبنية التحتية للمدن الذكية.",
-            infra_road_h: "الطرق والتمهيد",
-            infra_road_p: "أعمال الحفر والردم، تمهيد الطرق، وتجهيز طبقات التأسيس للمشاريع الكبرى.",
-            infra_detail_h: "الدقة تحت الأرض.. هي ما يضمن الأمان فوقها",
-            infra_detail_p: "نحن ندرك أن أعمال البنية التحتية هي أصعب مراحل التنفيذ نظراً لتعقيداتها الفنية. لذا نستخدم أحدث معدات الحفر الموجه (HDD) وأجهزة كشف المرافق لضمان تنفيذ الشبكات دون أخطاء أو تداخلات.",
-            infra_f1: "الالتزام بالمواصفات القياسية والهندسية.",
-            infra_f2: "سرعة التنفيذ لتقليل تعطيل المناطق السكنية.",
-            infra_f3: "استخدام مواد معتمدة تدوم لعقود.",
-            infra_cta: "تواصل مع قسم المشاريع"
-        },
-        en: {
-            dir: "ltr",
-            btn_lang: "العربية",
-            infra_title: "Infrastructure Works | QSC",
-            infra_hero_h1: "Infrastructure Works",
-            infra_hero_p: "Building the core foundations of modern cities with integrated networks that ensure life and service sustainability.",
-            infra_water_h: "Water & Sewage",
-            infra_water_p: "Executing pressure lines, gravity networks, and lifting stations with the highest quality standards.",
-            infra_elec_h: "Power Networks",
-            infra_elec_p: "Laying medium and low voltage cables, installing transformers and electrical rooms.",
-            infra_comm_h: "Telecom & IT",
-            infra_comm_p: "Implementing fiber optic routes and smart city infrastructure.",
-            infra_road_h: "Roads & Grading",
-            infra_road_p: "Excavation and backfilling, road grading, and base layer preparation for mega projects.",
-            infra_detail_h: "Precision Underground.. Guarantees Safety Above",
-            infra_detail_p: "We understand that infrastructure is the most challenging stage due to technical complexities. We use advanced HDD equipment and utility locators to ensure flawless execution.",
-            infra_f1: "Compliance with engineering and standard specifications.",
-            infra_f2: "Swift execution to minimize disruption in residential areas.",
-            infra_f3: "Using certified materials that last for decades.",
-            infra_cta: "Contact Projects Department"
-        }
-    };
-
+const translations = {
+    ar: {
+        dir: "rtl",
+        btn_lang: "English",
+        nav_home: "الرئيسية",
+        nav_services: "خدماتنا",
+        repair_title: "الإصلاح والدعم الفني | QSC",
+        repair_hero_h: "الإصلاح والدعم الفني السريع",
+        repair_hero_p: "نحن هنا لضمان استمرارية أعمالكم.. حلول تقنية فورية وإصلاحات جذرية للأعطال الطارئة.",
+        rep_emer_h: "إصلاح الطوارئ",
+        rep_emer_p: "فرق استجابة سريعة للتعامل مع الأعطال المفاجئة في الأنظمة الميكانيكية والكهربائية.",
+        rep_supp_h: "دعم فني 24/7",
+        rep_supp_p: "استشارات تقنية ودعم فني مباشر لحل المشكلات التشغيلية وضمان كفاءة الأداء.",
+        rep_parts_h: "قطع الغيار",
+        rep_parts_p: "توفير قطع الغيار الأصلية والمواد الاستهلاكية اللازمة لعمليات الإصلاح بأسعار تنافسية.",
+        rep_ov_h: "إعادة التأهيل",
+        rep_ov_p: "تحديث الأنظمة القديمة وإعادة تأهيل المعدات الميكانيكية لرفع كفاءتها التشغيلية.",
+        rep_detail_h: "خبرة فنية تعيد الحياة لمنشآتك",
+        rep_detail_p: "في QSC، لا نكتفي بإصلاح العرض، بل نبحث عن أصل المشكلة لمنع تكرارها. فريقنا مزود بأحدث أجهزة التشخيص لضمان دقة الإصلاح في أقل وقت ممكن.",
+        rep_f1: "تشخيص دقيق باستخدام أجهزة فحص متطورة.",
+        rep_f2: "ضمان على كافة أعمال الإصلاح وقطع الغيار.",
+        rep_f3: "مهندسون وفنيون معتمدون ذوي خبرة واسعة.",
+        rep_cta: "اطلب دعم فني الآن"
+    },
+    en: {
+        dir: "ltr",
+        btn_lang: "العربية",
+        nav_home: "Home",
+        nav_services: "Our Services",
+        repair_title: "Repair & Technical Support | QSC",
+        repair_hero_h: "Rapid Repair & Technical Support",
+        repair_hero_p: "We are here to ensure your business continuity.. immediate technical solutions and radical repairs for emergency breakdowns.",
+        rep_emer_h: "Emergency Repair",
+        rep_emer_p: "Quick response teams to handle sudden failures in mechanical and electrical systems.",
+        rep_supp_h: "24/7 Tech Support",
+        rep_supp_p: "Direct technical consultations and support to solve operational issues and ensure efficiency.",
+        rep_parts_h: "Spare Parts",
+        rep_parts_p: "Providing original spare parts and consumables needed for repairs at competitive prices.",
+        rep_ov_h: "Overhaul & Refurbishment",
+        rep_ov_p: "Upgrading legacy systems and refurbishing mechanical equipment to boost operational efficiency.",
+        rep_detail_h: "Technical Expertise That Revitalizes Your Facilities",
+        rep_detail_p: "At QSC, we don't just fix the symptoms; we find the root cause to prevent recurrence. Our team is equipped with the latest diagnostic tools for precise and timely repairs.",
+        rep_f1: "Accurate diagnosis using advanced inspection devices.",
+        rep_f2: "Warranty on all repair works and spare parts.",
+        rep_f3: "Certified engineers and technicians with extensive experience.",
+        rep_cta: "Request Tech Support Now"
+    }
+};
     const langBtn = document.getElementById('lang-toggler');
     const elementsToTranslate = document.querySelectorAll('[data-i18n]');
     const bootstrapLink = document.querySelector('link[href*="bootstrap"]');

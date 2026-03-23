@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="ser_3_h">خدمات الصيانة | QSC</title>
+    <title data-i18n="coat_page_title">الطلاء والعزل | QSC</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
@@ -13,38 +13,36 @@
         .text-blue { color: var(--main-blue); }
         .bg-orange { background-color: var(--main-orange) !important; }
         
-        .maintenance-hero {
-            background: linear-gradient(rgba(13, 34, 53, 0.8), rgba(13, 34, 53, 0.8)), 
-                        url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200');
+        /* Hero Section */
+        .coating-hero {
+            background: linear-gradient(rgba(13, 34, 53, 0.85), rgba(13, 34, 53, 0.85)), 
+                        url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1200');
             background-size: cover;
             background-position: center;
             color: white;
             padding: 100px 0;
         }
 
-        .service-card { border: none; transition: all 0.3s ease; border-bottom: 4px solid transparent; }
+        .service-card { border: none; transition: all 0.3s ease; border-bottom: 4px solid transparent; border-radius: 15px; }
         .service-card:hover { transform: translateY(-10px); border-color: var(--main-orange); box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important; }
         .icon-box { width: 70px; height: 70px; background: #fff3e0; color: var(--main-orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; margin-bottom: 20px; }
+
+        /* Navbar Customization */
+        .text-orange-hover:hover { color: #ff9f1c !important; transition: 0.3s; }
+        .transition-hover:hover { transform: translateY(-2px); transition: 0.3s; background-color: #ff9f1c; border-color: #ff9f1c; color: #0d2235; }
         
-        /* زرار تبديل اللغة الثابت للتجربة */
-        #lang-toggler { position: fixed; top: 20px; left: 20px; z-index: 1000; }
+        @media (max-width: 991px) {
+            .border-start { border-right: none !important; border-top: 1px solid #ff9f1c; padding-top: 15px; margin-top: 10px; border-left: none !important; }
+            .navbar-nav { text-align: center; }
+            .navbar-nav li { margin-bottom: 10px; }
+        }
     </style>
 </head>
 <body>
-<style>
-    .text-orange-hover:hover { color: #ff9f1c !important; transition: 0.3s; }
-    .transition-hover:hover { transform: translateY(-2px); transition: 0.3s; background-color: #ff9f1c; border-color: #ff9f1c; color: #0d2235; }
-    
-    @media (max-width: 991px) {
-        .border-start { border-right: none !important; border-top: 1px solid #ff9f1c; padding-top: 15px; margin-top: 10px; border-left: none !important; }
-        .navbar-nav { text-align: center; }
-        .navbar-nav li { margin-bottom: 10px; }
-    }
-</style>    
+
 <nav class="navbar navbar-expand-lg sticky-top shadow-sm py-3" style="background-color: #0d2235; border-bottom: 3px solid #ff9f1c;">
     <div class="container">
-        
-        <a class="navbar-brand me-0" href="index.html">
+        <a class="navbar-brand me-0" href="../index.html">
             <img src="../logo.jpeg" alt="Logo" width="50" height="50" class="img-fluid rounded shadow-sm">
         </a>
 
@@ -61,7 +59,7 @@
                     <a class="nav-link text-white text-orange-hover" href="../index.html#services">خدماتنا</a>
                 </li>
                 <li class="nav-item px-3 mt-2 mt-lg-0">
-                    <button id="lang-toggler" class="btn btn-light btn-sm fw-bold rounded-pill px-3 shadow-sm transition-hover">
+                    <button id="lang-toggler" class="btn btn-light btn-sm fw-bold rounded-pill px-4 shadow-sm transition-hover">
                         English
                     </button>
                 </li>
@@ -73,16 +71,13 @@
                 </div>
             </div>
         </div>
-
     </div>
 </nav>
 
-    <button id="lang-toggler" class="btn btn-light shadow-sm fw-bold">English</button>
-
-    <header class="maintenance-hero text-center">
+    <header class="coating-hero text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold mb-3" data-i18n="maint_hero_title">خدمات الصيانة الشاملة</h1>
-            <p class="lead" data-i18n="ser_3_p">برامج صيانة وقائية وعلاجية تضمن استدامة مبانيكم ومرافقكم بأعلى معايير الجودة.</p>
+            <h1 class="display-4 fw-bold mb-3" data-i18n="coat_hero_title">حلول الطلاء والعزل الاحترافية</h1>
+            <p class="lead" data-i18n="coat_hero_desc">حماية قصوى للمنشآت والأنابيب ضد التآكل والعوامل الجوية بأحدث التقنيات العالمية.</p>
         </div>
     </header>
 
@@ -92,25 +87,25 @@
                 
                 <div class="col-md-6 col-lg-4">
                     <div class="card service-card h-100 shadow-sm p-4">
-                        <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
-                        <h4 class="fw-bold text-blue mb-3" data-i18n="maint_prev_title">صيانة وقائية</h4>
-                        <p class="text-muted" data-i18n="maint_prev_desc">فحوصات دورية مجدولة لتقليل الأعطال المفاجئة وإطالة عمر المعدات والأنظمة الميكانيكية.</p>
+                        <div class="icon-box"><i class="fas fa-fill-drip"></i></div>
+                        <h4 class="fw-bold text-blue mb-3" data-i18n="coat_internal_title">الطلاء الداخلي</h4>
+                        <p class="text-muted" data-i18n="coat_internal_desc">تطبيق طبقات الحماية الداخلية للأنابيب والخزانات لضمان عدم التفاعل وحماية المنتج والمنشأة.</p>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card service-card h-100 shadow-sm p-4">
-                        <div class="icon-box"><i class="fas fa-tools"></i></div>
-                        <h4 class="fw-bold text-blue mb-3" data-i18n="maint_corr_title">صيانة علاجية (إصلاح)</h4>
-                        <p class="text-muted" data-i18n="maint_corr_desc">استجابة سريعة للأعطال الطارئة مع توفير قطع غيار أصلية وحلول هندسية متكاملة.</p>
+                        <div class="icon-box"><i class="fas fa-paint-roller"></i></div>
+                        <h4 class="fw-bold text-blue mb-3" data-i18n="coat_external_title">الطلاء الخارجي</h4>
+                        <p class="text-muted" data-i18n="coat_external_desc">أنظمة طلاء خارجية مقاومة للصدأ، الأشعة فوق البنفسجية، والظروف البيئية القاسية.</p>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card service-card h-100 shadow-sm p-4">
-                        <div class="icon-box"><i class="fas fa-bolt"></i></div>
-                        <h4 class="fw-bold text-blue mb-3" data-i18n="maint_mep_title">أنظمة MEP</h4>
-                        <p class="text-muted" data-i18n="maint_mep_desc">صيانة شبكات الكهرباء، السباكة، وأنظمة التكييف والتهوية بأحدث التقنيات.</p>
+                        <div class="icon-box"><i class="fas fa-temperature-low"></i></div>
+                        <h4 class="fw-bold text-blue mb-3" data-i18n="coat_thermal_title">العزل الحراري</h4>
+                        <p class="text-muted" data-i18n="coat_thermal_desc">حلول عزل حراري متطورة للمواسير والمعدات لتقليل فقد الطاقة والحفاظ على درجات الحرارة.</p>
                     </div>
                 </div>
 
@@ -118,17 +113,17 @@
 
             <div class="row mt-5 g-4 align-items-center">
                 <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800" class="img-fluid rounded-4 shadow" alt="Maintenance Team">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800" class="img-fluid rounded-4 shadow" alt="Coating Works">
                 </div>
                 <div class="col-lg-6">
                     <div class="ps-lg-4">
-                        <h2 class="text-blue fw-bold mb-4" data-i18n="maint_why_title">لماذا تختار QSC للصيانة؟</h2>
+                        <h2 class="text-blue fw-bold mb-4" data-i18n="coat_why_title">لماذا تختار خدمة العزل والطلاء لدينا؟</h2>
                         <ul class="list-unstyled">
-                            <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-orange ms-2"></i> <span data-i18n="maint_reason_1">خبرة تمتد من عام 2010 في السوق المصري والسعودي.</span></li>
-                            <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-orange ms-2"></i> <span data-i18n="maint_reason_2">كوادر فنية مدربة ومعتمدة عالمياً.</span></li>
-                            <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-orange ms-2"></i> <span data-i18n="maint_reason_3">الالتزام بالجداول الزمنية ومعايير السلامة.</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-orange ms-2"></i> <span data-i18n="coat_reason_1">استخدام مواد طلاء وعزل معتمدة من كبرى الشركات العالمية.</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-orange ms-2"></i> <span data-i18n="coat_reason_2">فريق متخصص في تحضير الأسطح (Sandblasting) والرش الاحترافي.</span></li>
+                            <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-orange ms-2"></i> <span data-i18n="coat_reason_3">مطابقة معايير الجودة NACE و SSPC الدولية.</span></li>
                         </ul>
-                        <a href="https://wa.me/966534656881" class="btn bg-orange fw-bold px-4 py-2 mt-3 text-white" data-i18n="maint_btn_visit">طلب زيارة فنية</a>
+                        <a href="https://wa.me/966534656881" class="btn bg-orange fw-bold px-4 py-2 mt-3 text-white transition-hover" data-i18n="coat_btn_quote">طلب فحص أو تسعير</a>
                     </div>
                 </div>
             </div>

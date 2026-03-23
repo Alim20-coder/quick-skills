@@ -1,47 +1,52 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const translations = {
-        ar: {
-            dir: "rtl",
-            btn_lang: "English",
-            medical_badge: "حلول طبية متكاملة",
-            ser_6_h: "قسم الهندسة الطبية",
-            ser_6_p: "نحن متخصصون في تجهيز المنشآت الصحية بأحدث الحلول الهندسية لغرف العمليات، العزل، ووحدات التعقيم وفق المواصفات العالمية.",
-            medical_op_title: "تجهيز غرف العمليات",
-            medical_op_desc: "تصميم وتنفيذ غرف العمليات بنظام الكبسولة (Modular OR) مع التحكم الكامل في تدفق الهواء والضغط.",
-            medical_iso_title: "وحدات العزل والتعقيم",
-            medical_iso_desc: "تجهيز غرف العزل ذات الضغط السالب ووحدات التعقيم المركزي (CSSD) لضمان أعلى مستويات السلامة.",
-            medical_gas_title: "شبكات الغازات الطبية",
-            medical_gas_desc: "تصميم وتركيب شبكات الأكسجين والهواء الطبي وأنظمة التشفط المركزية بدقة هندسية متناهية.",
-            medical_commit_title: "التزامنا بالمعايير الطبية",
-            medical_commit_desc: "في QSC، ندرك أن الخطأ في الهندسة الطبية غير مسموح به. لذلك نلتزم بـ:",
-            medical_list_1: "معايير مكافحة العدوى العالمية (JCI).",
-            medical_list_2: "أنظمة تنقية الهواء عالية الكفاءة (HEPA Filters).",
-            medical_list_3: "الأرضيات والحوائط المضادة للبكتيريا والساكنة.",
-            medical_btn: "طلب استشارة فنية",
-            nav_contact: "تواصل معنا"
-        },
-        en: {
-            dir: "ltr",
-            btn_lang: "العربية",
-            medical_badge: "Integrated Medical Solutions",
-            ser_6_h: "Medical Engineering Department",
-            ser_6_p: "We specialize in equipping health facilities with the latest engineering solutions for operating rooms, isolation, and sterilization units according to international specifications.",
-            medical_op_title: "Operating Room Equipment",
-            medical_op_desc: "Design and implementation of modular operating rooms (Modular OR) with full control over airflow and pressure.",
-            medical_iso_title: "Isolation & Sterilization Units",
-            medical_iso_desc: "Equipping negative pressure isolation rooms and central sterilization units (CSSD) to ensure the highest safety levels.",
-            medical_gas_title: "Medical Gas Networks",
-            medical_gas_desc: "Design and installation of oxygen, medical air, and central vacuum systems with extreme engineering precision.",
-            medical_commit_title: "Our Commitment to Medical Standards",
-            medical_commit_desc: "At QSC, we realize that errors in medical engineering are not permitted. Therefore, we adhere to:",
-            medical_list_1: "International Infection Control Standards (JCI).",
-            medical_list_2: "High-Efficiency Particulate Air (HEPA Filters).",
-            medical_list_3: "Anti-bacterial and anti-static floors and walls.",
-            medical_btn: "Request Technical Consultation",
-            nav_contact: "Contact Us"
-        }
-    };
-
+const translations = {
+    ar: {
+        dir: "rtl",
+        btn_lang: "English",
+        nav_home: "الرئيسية",
+        nav_services: "خدماتنا",
+        struct_page_title: "الأعمال الهيكلية والإنشائية | QSC",
+        struct_badge: "تنفيذ، توريد، وإشراف",
+        struct_hero_h: "الأعمال الهيكلية والإنشائية",
+        struct_hero_p: "نبني الأسس المتينة للمشاريع العملاقة، من الهياكل الخرسانية المسلحة إلى المنشآت المعدنية المتطورة بأعلى دقة هندسية.",
+        struct_conc_h: "الخرسانة المسلحة",
+        struct_conc_p: "تنفيذ كافة الأعمال الخرسانية من القواعد والأعمدة والأسقف باستخدام أحدث أنظمة الشدات المعدنية.",
+        struct_steel_h: "المنشآت المعدنية",
+        struct_steel_p: "تصميم وتركيب الهياكل الحديدية (Steel Structure) للمصانع والمستودعات والمباني التجارية.",
+        struct_earth_h: "الحفر والتدعيم",
+        struct_earth_p: "أعمال الحفر والردم وتدعيم جوانب الحفر لضمان سلامة المنشآت المجاورة أثناء التنفيذ.",
+        struct_qual_h: "قوة التنفيذ وجودة البناء",
+        struct_qual_p: "في QSC، نلتزم بتسليم مشاريع إنشائية تعيش لعقود، من خلال رقابة صارمة على جودة المواد الموردة وعمليات الصب:",
+        struct_list_1: "استخدام خرسانة معتمدة ومختبرة معملياً.",
+        struct_list_2: "مطابقة المخططات الإنشائية والأكواد الهندسية (SBC).",
+        struct_list_3: "فرق عمل متخصصة في النجارة والحدادة المسلحة.",
+        struct_btn: "ابدأ مشروعك الإنشائي معنا",
+        nav_contact: "تواصل معنا"
+    },
+    en: {
+        dir: "ltr",
+        btn_lang: "العربية",
+        nav_home: "Home",
+        nav_services: "Our Services",
+        struct_page_title: "Structural & Civil Works | QSC",
+        struct_badge: "Execution, Supply & Supervision",
+        struct_hero_h: "Structural & Civil Works",
+        struct_hero_p: "Building solid foundations for mega projects, from reinforced concrete structures to advanced steel buildings with supreme engineering precision.",
+        struct_conc_h: "Reinforced Concrete",
+        struct_conc_p: "Execution of all concrete works including foundations, columns, and slabs using the latest modular formwork systems.",
+        struct_steel_h: "Steel Structures",
+        struct_steel_p: "Design and installation of steel structures for factories, warehouses, and commercial buildings.",
+        struct_earth_h: "Earthworks & Shoring",
+        struct_earth_p: "Excavation, backfilling, and shoring works to ensure the safety of adjacent structures during execution.",
+        struct_qual_h: "Execution Strength & Building Quality",
+        struct_qual_p: "At QSC, we are committed to delivering construction projects that last for decades through strict control over material quality and pouring processes:",
+        struct_list_1: "Using certified and lab-tested concrete mix.",
+        struct_list_2: "Compliance with structural shop drawings and Building Codes (SBC).",
+        struct_list_3: "Specialized teams for professional carpentry and steel fixing.",
+        struct_btn: "Start Your Construction Project With Us",
+        nav_contact: "Contact Us"
+    }
+};
     const langBtn = document.getElementById('lang-toggler');
     const elementsToTranslate = document.querySelectorAll('[data-i18n]');
 

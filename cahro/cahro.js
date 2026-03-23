@@ -1,54 +1,58 @@
 document.addEventListener("DOMContentLoaded", function() {
     
     // 1. بيانات الترجمة الخاصة بصفحة MEP
-    const translations = {
-        ar: {
-            dir: "rtl",
-            btn_lang: "English",
-            mep_page_title: "الأعمال الكهروميكانيكية MEP | QSC",
-            mep_hero_h1: "حلول الكهروميكانيك (MEP)",
-            mep_hero_p: "نحن نبض المبنى.. نصمم وننفذ الأنظمة الحيوية التي تجعل المنشأة تعمل بكفاءة وذكاء.",
-            mep_elec_h: "الأنظمة الكهربائية",
-            mep_elec_1: "لوحات التوزيع والجهد المنخفض.",
-            mep_elec_2: "أنظمة الإنارة الداخلية والخارجية.",
-            mep_elec_3: "المولدات وأنظمة التيار الخفيف.",
-            mep_hvac_h: "أنظمة HVAC",
-            mep_hvac_1: "أنظمة التكييف المركزي والـ VRF.",
-            mep_hvac_2: "شبكات التهوية ومجاري الهواء (Duct).",
-            mep_hvac_3: "أنظمة التحكم في الحرارة والرطوبة.",
-            mep_plumb_h: "السباكة ومكافحة الحريق",
-            mep_plumb_1: "شبكات تغذية المياه والصرف الصحي.",
-            mep_plumb_2: "أنظمة إطفاء الحريق الآلية (Sprinklers).",
-            mep_plumb_3: "محطات الرفع ومعالجة المياه.",
-            mep_integ_h: "تكامل الأنظمة لضمان الأداء",
-            mep_integ_p: "نحن لا نقوم فقط بالتركيب، بل نصمم أنظمة كهروميكانيكية متكاملة تعمل بانسجام تام. نركز على توفير استهلاك الطاقة وسهولة الصيانة المستقبلية لتقليل التكاليف التشغيلية للمالك.",
-            mep_code_txt: "اعتماد الكود العالمي في كافة التصميمات.",
-            mep_cta: "اطلب عرض سعر فني"
-        },
-        en: {
-            dir: "ltr",
-            btn_lang: "العربية",
-            mep_page_title: "Electromechanical Works MEP | QSC",
-            mep_hero_h1: "Electromechanical Solutions (MEP)",
-            mep_hero_p: "We are the heart of the building.. We design and execute the vital systems that make facilities work efficiently and smartly.",
-            mep_elec_h: "Electrical Systems",
-            mep_elec_1: "Distribution boards and low voltage systems.",
-            mep_elec_2: "Indoor and outdoor lighting systems.",
-            mep_elec_3: "Generators and light current systems.",
-            mep_hvac_h: "HVAC Systems",
-            mep_hvac_1: "Central air conditioning and VRF systems.",
-            mep_hvac_2: "Ventilation networks and air ducts.",
-            mep_hvac_3: "Temperature and humidity control systems.",
-            mep_plumb_h: "Plumbing & Firefighting",
-            mep_plumb_1: "Water supply and sewage networks.",
-            mep_plumb_2: "Automatic fire extinguishing systems (Sprinklers).",
-            mep_plumb_3: "Water lifting and treatment plants.",
-            mep_integ_h: "System Integration for Performance",
-            mep_integ_p: "We don't just install; we design integrated electromechanical systems that work in perfect harmony. We focus on energy savings and ease of future maintenance to reduce operational costs for the owner.",
-            mep_code_txt: "International code compliance in all designs.",
-            mep_cta: "Request a Technical Quote"
-        }
-    };
+const translations = {
+    ar: {
+        dir: "rtl",
+        btn_lang: "English",
+        nav_home: "الرئيسية",
+        nav_services: "خدماتنا",
+        piping_page_title: "أنابيب المحطات Station Piping | QSC",
+        piping_hero_h: "أنابيب المحطات (Station Piping)",
+        piping_hero_p: "نحن المتخصصون في شريان الصناعة.. تصميم وتركيب شبكات الأنابيب والضخ للمحطات البترولية والصناعية.",
+        pip_install_h: "تركيب شبكات الأنابيب",
+        pip_install_1: "تركيب أنابيب الكربون والستانلس ستيل.",
+        pip_install_2: "أعمال اللحام المتخصص بكافة الأقطار.",
+        pip_install_3: "تركيب الصمامات والمحابس الصناعية.",
+        pip_pumping_h: "أنظمة الضخ والتحكم",
+        pip_pumping_1: "تركيب مضخات الطرد المركزي والعمودية.",
+        pip_pumping_2: "تنفيذ أنظمة الحماية من المطرقة المائية.",
+        pip_pumping_3: "لوحات التحكم الآلي في تدفق السوائل.",
+        pip_tanks_h: "الخزانات والوصلات",
+        pip_tanks_1: "ربط خزانات الوقود والمياه بالمحطات.",
+        pip_tanks_2: "تنفيذ وصلات التمدد والاهتزاز.",
+        pip_tanks_3: "أعمال العزل الحراري للأنابيب والمعدات.",
+        pip_quality_h: "دقة التنفيذ في أصعب الظروف",
+        pip_quality_p: "في QSC، نلتزم بتنفيذ مشاريع الأنابيب (Piping Projects) وفقاً لأكواد ASME و API العالمية. نضمن لعملائنا دقة متناهية في اللحامات، واختبارات ضغط هيدروليكية صارمة قبل تسليم أي محطة لضمان صفر حوادث أو تسريبات.",
+        pip_safety_txt: "تطبيق صارم لمعايير السلامة المهنية (HSE).",
+        pip_cta: "اطلب استشارة فنية لمشروعك"
+    },
+    en: {
+        dir: "ltr",
+        btn_lang: "العربية",
+        nav_home: "Home",
+        nav_services: "Our Services",
+        piping_page_title: "Station Piping Works | QSC",
+        piping_hero_h: "Station Piping Solutions",
+        piping_hero_p: "Specialists in the industrial lifeline.. designing and installing piping and pumping networks for oil and industrial plants.",
+        pip_install_h: "Piping Network Installation",
+        pip_install_1: "Installation of carbon and stainless steel pipes.",
+        pip_install_2: "Specialized welding works for all diameters.",
+        pip_install_3: "Installation of industrial valves and fittings.",
+        pip_pumping_h: "Pumping & Control Systems",
+        pip_pumping_1: "Installation of centrifugal and vertical pumps.",
+        pip_pumping_2: "Implementation of water hammer protection systems.",
+        pip_pumping_3: "Automated flow control panels.",
+        pip_tanks_h: "Tanks & Connections",
+        pip_tanks_1: "Connecting fuel and water tanks to stations.",
+        pip_tanks_2: "Execution of expansion and vibration joints.",
+        pip_tanks_3: "Thermal insulation for pipes and equipment.",
+        pip_quality_h: "Precision in Tough Conditions",
+        pip_quality_p: "At QSC, we are committed to executing piping projects according to international ASME and API codes. We guarantee extreme precision in welding and rigorous hydraulic pressure tests to ensure zero accidents or leaks.",
+        pip_safety_txt: "Strict application of Occupational Safety (HSE) standards.",
+        pip_cta: "Request a Technical Consultation"
+    }
+};
 
     // 2. منطق التبديل (The Logic)
     const langBtn = document.getElementById('lang-toggler');

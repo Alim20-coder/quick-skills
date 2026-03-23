@@ -1,43 +1,42 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const translations = {
-        ar: {
-            dir: "rtl",
-            btn_lang: "English",
-            ser_3_h: "خدمات الصيانة | QSC",
-            maint_hero_title: "خدمات الصيانة الشاملة",
-            ser_3_p: "برامج صيانة وقائية وعلاجية تضمن استدامة مبانيكم ومرافقكم بأعلى معايير الجودة.",
-            maint_prev_title: "صيانة وقائية",
-            maint_prev_desc: "فحوصات دورية مجدولة لتقليل الأعطال المفاجئة وإطالة عمر المعدات والأنظمة الميكانيكية.",
-            maint_corr_title: "صيانة علاجية (إصلاح)",
-            maint_corr_desc: "استجابة سريعة للأعطال الطارئة مع توفير قطع غيار أصلية وحلول هندسية متكاملة.",
-            maint_mep_title: "أنظمة MEP",
-            maint_mep_desc: "صيانة شبكات الكهرباء، السباكة، وأنظمة التكييف والتهوية بأحدث التقنيات.",
-            maint_why_title: "لماذا تختار QSC للصيانة؟",
-            maint_reason_1: "خبرة تمتد من عام 2010 في السوق المصري والسعودي.",
-            maint_reason_2: "كوادر فنية مدربة ومعتمدة عالمياً.",
-            maint_reason_3: "الالتزام بالجداول الزمنية ومعايير السلامة.",
-            maint_btn_visit: "طلب زيارة فنية"
-        },
-        en: {
-            dir: "ltr",
-            btn_lang: "العربية",
-            ser_3_h: "Maintenance Services | QSC",
-            maint_hero_title: "Comprehensive Maintenance Services",
-            ser_3_p: "Preventive and corrective maintenance programs ensuring building sustainability with top quality standards.",
-            maint_prev_title: "Preventive Maintenance",
-            maint_prev_desc: "Scheduled periodic inspections to reduce sudden failures and extend equipment and mechanical systems lifespan.",
-            maint_corr_title: "Corrective Maintenance",
-            maint_corr_desc: "Rapid response to emergency breakdowns with original spare parts and integrated engineering solutions.",
-            maint_mep_title: "MEP Systems",
-            maint_mep_desc: "Maintenance of electrical grids, plumbing, HVAC, and ventilation systems using latest techniques.",
-            maint_why_title: "Why Choose QSC for Maintenance?",
-            maint_reason_1: "Experience since 2010 in Egyptian and Saudi markets.",
-            maint_reason_2: "Globally trained and certified technical staff.",
-            maint_reason_3: "Strict commitment to schedules and safety standards.",
-            maint_btn_visit: "Request Technical Visit"
-        }
-    };
-
+const translations = {
+    ar: {
+        dir: "rtl",
+        btn_lang: "English",
+        coat_page_title: "الطلاء والعزل | QSC",
+        coat_hero_title: "حلول الطلاء والعزل الاحترافية",
+        coat_hero_desc: "حماية قصوى للمنشآت والأنابيب ضد التآكل والعوامل الجوية بأحدث التقنيات العالمية.",
+        coat_internal_title: "الطلاء الداخلي",
+        coat_internal_desc: "تطبيق طبقات الحماية الداخلية للأنابيب والخزانات لضمان عدم التفاعل وحماية المنتج والمنشأة.",
+        coat_external_title: "الطلاء الخارجي",
+        coat_external_desc: "أنظمة طلاء خارجية مقاومة للصدأ، الأشعة فوق البنفسجية، والظروف البيئية القاسية.",
+        coat_thermal_title: "العزل الحراري",
+        coat_thermal_desc: "حلول عزل حراري متطورة للمواسير والمعدات لتقليل فقد الطاقة والحفاظ على درجات الحرارة.",
+        coat_why_title: "لماذا تختار خدمة العزل والطلاء لدينا؟",
+        coat_reason_1: "استخدام مواد طلاء وعزل معتمدة من كبرى الشركات العالمية.",
+        coat_reason_2: "فريق متخصص في تحضير الأسطح (Sandblasting) والرش الاحترافي.",
+        coat_reason_3: "مطابقة معايير الجودة NACE و SSPC الدولية.",
+        coat_btn_quote: "طلب فحص أو تسعير"
+    },
+    en: {
+        dir: "ltr",
+        btn_lang: "العربية",
+        coat_page_title: "Coating & Insulation | QSC",
+        coat_hero_title: "Professional Coating & Insulation Solutions",
+        coat_hero_desc: "Maximum protection for facilities and pipelines against corrosion and weather elements.",
+        coat_internal_title: "Internal Coating",
+        coat_internal_desc: "Applying internal protection layers for pipes and tanks to ensure non-reactivity and facility safety.",
+        coat_external_title: "External Coating",
+        coat_external_desc: "External coating systems resistant to rust, UV rays, and harsh environmental conditions.",
+        coat_thermal_title: "Thermal Insulation",
+        coat_thermal_desc: "Advanced thermal insulation solutions for pipes and equipment to minimize energy loss.",
+        coat_why_title: "Why Choose Our Coating Services?",
+        coat_reason_1: "Use of certified coating and insulation materials from global leaders.",
+        coat_reason_2: "Specialized team in surface preparation (Sandblasting) and professional spraying.",
+        coat_reason_3: "Compliance with international NACE and SSPC quality standards.",
+        coat_btn_quote: "Request Inspection or Quote"
+    }
+};
     const langBtn = document.getElementById('lang-toggler');
     const elementsToTranslate = document.querySelectorAll('[data-i18n]');
 

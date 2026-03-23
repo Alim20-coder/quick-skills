@@ -1,39 +1,42 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const translations = {
-        ar: {
-            dir: "rtl",
-            btn_lang: "English",
-            ser_5_h: "الاستشارات البيئية والاستدامة | QSC",
-            env_hero_title: "الاستشارات البيئية والاستدامة",
-            ser_5_p: "نساعدكم في بناء مشاريع صديقة للبيئة متوافقة مع المعايير الدولية والمحلية.",
-            env_feat_1_title: "دراسات تقييم الأثر البيئي (EIA)",
-            env_feat_1_desc: "إعداد التقارير الفنية اللازمة للحصول على الموافقات البيئية للمشاريع الصناعية والإنشائية، وضمان توافقها مع قوانين البيئة.",
-            env_feat_2_title: "تصميم المباني الخضراء (LEED)",
-            env_feat_2_desc: "تقديم استشارات للحصول على شهادات الريادة في الطاقة والتصميم البيئي، لتقليل استهلاك الطاقة والمياه وتحسين جودة الحياة داخل المبنى.",
-            env_feat_3_title: "حلول إدارة النفايات والاستدامة",
-            env_feat_3_desc: "وضع خطط متكاملة للتخلص الآمن من النفايات الإنشائية وإعادة تدويرها، وتقديم حلول الطاقة المتجددة للمشاريع الكبرى.",
-            env_cta_title: "هل تبحث عن حلول مستدامة لمشروعك؟",
-            env_cta_desc: "فريقنا من الخبراء البيئيين جاهز لمساعدتك في الحصول على التراخيص وتحويل مشروعك إلى 'مشروع أخضر'.",
-            env_cta_btn: "احصل على استشارة بيئية الآن"
-        },
-        en: {
-            dir: "ltr",
-            btn_lang: "العربية",
-            ser_5_h: "Environmental Consulting & Sustainability | QSC",
-            env_hero_title: "Environmental Consulting & Sustainability",
-            ser_5_p: "We help you build eco-friendly projects compliant with international and local standards.",
-            env_feat_1_title: "Environmental Impact Assessment (EIA)",
-            env_feat_1_desc: "Preparing technical reports required for environmental approvals for industrial and construction projects, ensuring compliance with environmental laws.",
-            env_feat_2_title: "Green Building Design (LEED)",
-            env_feat_2_desc: "Providing consultancy to obtain LEED certifications, reducing energy and water consumption and improving indoor quality of life.",
-            env_feat_3_title: "Waste Management & Sustainability Solutions",
-            env_feat_3_desc: "Developing integrated plans for safe disposal and recycling of construction waste, and providing renewable energy solutions for major projects.",
-            env_cta_title: "Looking for sustainable solutions for your project?",
-            env_cta_desc: "Our team of environmental experts is ready to help you obtain permits and transform your project into a 'Green Project'.",
-            env_cta_btn: "Get Environmental Consultation Now"
-        }
-    };
-
+const translations = {
+    ar: {
+        dir: "rtl",
+        btn_lang: "English",
+        nav_home: "الرئيسية",
+        nav_services: "خدماتنا",
+        ndt_page_title: "الجودة وتدريب NDT | QSC",
+        ndt_hero_h: "إدارة الجودة والتدريب على NDT",
+        ndt_hero_p: "نقدم حلولاً متكاملة لفحص المواد وتدريب الكوادر الفنية وفقاً للمعايير الدولية ASNT.",
+        ndt_feat_1_title: "خدمات الاختبارات غير التدميرية (NDT)",
+        ndt_feat_1_desc: "تنفيذ فحوصات UT, RT, MT, PT بأحدث الأجهزة لضمان خلو المعادن واللحامات من العيوب الهيكلية.",
+        ndt_feat_2_title: "برامج التدريب والتأهيل",
+        ndt_feat_2_desc: "دورات تدريبية متخصصة لمفتشي الجودة للحصول على شهادات Level I, II وفقاً لنظام SNT-TC-1A.",
+        ndt_feat_3_title: "نظم إدارة الجودة (QA/QC)",
+        ndt_feat_3_desc: "إعداد خطط الجودة (ITP)، ومراجعة إجراءات العمل لضمان مطابقة المشاريع للمواصفات الفنية القياسية.",
+        ndt_cta_title: "ارتقِ بمعايير الجودة في منشأتك",
+        ndt_cta_desc: "نحن شركاؤك في ضمان السلامة والكفاءة من خلال الفحص الدقيق والتدريب المحترف.",
+        ndt_cta_btn: "طلب استشارة فنية في الجودة"
+    },
+    en: {
+        dir: "ltr",
+        btn_lang: "العربية",
+        nav_home: "Home",
+        nav_services: "Services",
+        ndt_page_title: "Quality Control & NDT Training | QSC",
+        ndt_hero_h: "Quality Management & NDT Training",
+        ndt_hero_p: "Providing integrated material testing solutions and technical staff training according to ASNT international standards.",
+        ndt_feat_1_title: "Non-Destructive Testing (NDT) Services",
+        ndt_feat_1_desc: "Execution of UT, RT, MT, PT inspections using latest equipment to ensure welds and metals are free from structural defects.",
+        ndt_feat_2_title: "Training & Qualification Programs",
+        ndt_feat_2_desc: "Specialized training courses for QC inspectors to obtain Level I, II certifications per SNT-TC-1A system.",
+        ndt_feat_3_title: "Quality Management Systems (QA/QC)",
+        ndt_feat_3_desc: "Preparing Inspection & Test Plans (ITP) and reviewing procedures to ensure project compliance with standard technical specs.",
+        ndt_cta_title: "Elevate Quality Standards in Your Facility",
+        ndt_cta_desc: "We are your partners in ensuring safety and efficiency through precise inspection and professional training.",
+        ndt_cta_btn: "Request Technical Quality Consultation"
+    }
+};
     // ... (باقي كود التبديل المنطقي كما في الصفحات السابقة) ...
     const langBtn = document.getElementById('lang-toggler');
     const elementsToTranslate = document.querySelectorAll('[data-i18n]');

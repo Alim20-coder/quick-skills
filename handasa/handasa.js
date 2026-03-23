@@ -7,44 +7,48 @@ document.addEventListener("DOMContentLoaded", function() {
     // 1. بيانات الترجمة الخاصة بالصفحة
     const translations = {
         ar: {
-            dir: "rtl",
-            btn_lang: "English",
-            ser_1_h: "الهندسة المعمارية والمدنية | QSC",
-            civ_hero_title: "الهندسة المعمارية والمدنية",
-            ser_1_p: "من المخططات الورقية إلى الصروح العمرانية.. نبني برؤية هندسية مبتكرة.",
-            civ_arch_title: "التصميم المعماري",
-            civ_arch_desc: "تصميمات عصرية تجمع بين استغلال المساحات والجمال البصري مع تقديم مخططات 3D تفصيلية.",
-            civ_const_title: "التنفيذ الإنشائي",
-            civ_const_desc: "إشراف وتنفيذ كامل للأعمال الخرسانية والمباني بأعلى معايير الأمان والجودة الإنشائية.",
-            civ_finish_title: "التشطيبات والديكور",
-            civ_finish_desc: "تنفيذ أرقى أنواع التشطيبات الداخلية والخارجية وتسليم المشاريع بنظام 'مفتاح'.",
-            civ_precision_title: "الدقة في التنفيذ هي شعارنا",
-            civ_precision_desc: "في QSC، نهتم بأدق التفاصيل الإنشائية لضمان استدامة المبنى. نستخدم أحدث أجهزة الرفع المساحي ونطبق أعلى مواصفات الكود المصري والسعودي في البناء.",
-            civ_feat_1_title: "إشراف هندسي",
-            civ_feat_1_desc: "مهندسون متخصصون بكل موقع.",
-            civ_feat_2_title: "جودة المواد",
-            civ_feat_2_desc: "استخدام أفضل الخامات المعتمدة.",
-            civ_cta_btn: "اطلب معاينة لموقعك"
+            dir: "rtl", // إضافة الاتجاه
+            nav_home: "الرئيسية",
+            nav_services: "خدماتنا",
+            brand_name: "Quick Skills",
+            inf_hero_title: "المقاولات العامة والبنية التحتية",
+            inf_hero_desc: "نضع الأساس المتين للمستقبل.. تنفيذ شبكات الطرق والمرافق بأعلى معايير الجودة.",
+            inf_roads_title: "شبكات الطرق والأسفلت",
+            inf_roads_desc: "تمهيد ورصف الطرق الداخلية والسريعة، وتجهيز الطبقات الترابية وحماية الميول وفقاً للمواصفات الفنية.",
+            inf_water_title: "تمديدات المياه والصرف",
+            inf_water_desc: "تنفيذ شبكات مياه الشرب، خطوط الصرف الصحي، وشبكات تصريف مياه الأمطار بكفاءة عالية.",
+            inf_excav_title: "الحفر والردم والتسوية",
+            inf_excav_desc: "أعمال الحفر العميق، نقل التربة، تسوية الموقع العام وتجهيز الأرضيات للمشاريع الصناعية والسكنية.",
+            inf_precision_title: "الجودة في التأسيس هي التزامنا",
+            inf_precision_desc: "في QSC، ندرك أن قوة أي مشروع تبدأ من بنيته التحتية. نلتزم بأعلى مواصفات الجودة في المواد المستخدمة ونطبق معايير الأمان الدولية والمحلية (كود SASO وكود الطرق السعودي).",
+            inf_feat_1_title: "اختبارات المواد",
+            inf_feat_1_desc: "فحص دقيق للتربة والخرسانة والأسفلت.",
+            inf_feat_2_title: "الالتزام الزمني",
+            inf_feat_2_desc: "تسليم المرافق والشبكات في الوقت المحدد.",
+            inf_cta_btn: "اطلب دراسة لمشروعك",
+            nav_rep: "English" // النص اللي هيظهر على الزرار وأنت في العربي
         },
         en: {
-            dir: "ltr",
-            btn_lang: "العربية",
-            ser_1_h: "Architectural & Civil Engineering | QSC",
-            civ_hero_title: "Architectural & Civil Engineering",
-            ser_1_p: "From blueprints to urban monuments.. We build with an innovative engineering vision.",
-            civ_arch_title: "Architectural Design",
-            civ_arch_desc: "Modern designs blending space optimization with visual aesthetics, including detailed 3D plans.",
-            civ_const_title: "Structural Execution",
-            civ_const_desc: "Full supervision and execution of concrete works and buildings with the highest standards.",
-            civ_finish_title: "Finishing & Decoration",
-            civ_finish_desc: "Executing the finest types of interior and exterior finishes, delivering projects on a 'turn-key' basis.",
-            civ_precision_title: "Precision in Execution is Our Motto",
-            civ_precision_desc: "At QSC, we care about the smallest structural details to ensure sustainability. We use the latest surveying equipment and apply top building codes.",
-            civ_feat_1_title: "Engineering Supervision",
-            civ_feat_1_desc: "Specialized engineers at every site.",
-            civ_feat_2_title: "Material Quality",
-            civ_feat_2_desc: "Using the best-certified raw materials.",
-            civ_cta_btn: "Request a Site Inspection"
+            dir: "ltr", // إضافة الاتجاه
+            nav_home: "Home",
+            nav_services: "Our Services",
+            brand_name: "Quick Skills",
+            inf_hero_title: "General Contracting & Infrastructure",
+            inf_hero_desc: "Laying a solid foundation for the future.. implementing road networks and utilities with high standards.",
+            inf_roads_title: "Roads & Asphalt Networks",
+            inf_roads_desc: "Paving internal and highways, preparing soil layers, and slope protection according to technical specs.",
+            inf_water_title: "Water & Sewage Systems",
+            inf_water_desc: "Implementation of drinking water networks, sewage lines, and rainwater drainage systems with high efficiency.",
+            inf_excav_title: "Excavation & Leveling",
+            inf_excav_desc: "Deep excavation works, soil hauling, site leveling, and flooring preparation for industrial and residential projects.",
+            inf_precision_title: "Quality in Foundation is Our Commitment",
+            inf_precision_desc: "At QSC, we realize that the strength of any project starts from its infrastructure. We adhere to the highest quality specifications and local/international safety standards (SASO & Saudi Road Code).",
+            inf_feat_1_title: "Material Testing",
+            inf_feat_1_desc: "Precise testing for soil, concrete, and asphalt.",
+            inf_feat_2_title: "Time Commitment",
+            inf_feat_2_desc: "Delivering utilities and networks on the specified schedule.",
+            inf_cta_btn: "Request a Project Study",
+            nav_rep: "العربية" // النص اللي هيظهر على الزرار وأنت في الإنجليزي
         }
     };
 
@@ -55,13 +59,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 3. وظيفة التبديل
     const updateContent = (lang) => {
+        // تحديث لغة واتجاه الصفحة
         document.documentElement.lang = lang;
         document.documentElement.dir = translations[lang].dir;
 
+        // ترجمة كل العناصر اللي عندها data-i18n
         elementsToTranslate.forEach(element => {
             const key = element.getAttribute('data-i18n');
             if (translations[lang][key]) {
-                // لو العنصر هو الـ Title بتاع الصفحة
                 if (element.tagName === 'TITLE') {
                     document.title = translations[lang][key];
                 } else {
@@ -70,10 +75,15 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        if (langBtn) langBtn.textContent = translations[lang].btn_lang;
+        // تحديث نص الزرار (المهم جداً)
+        if (langBtn) {
+            langBtn.textContent = translations[lang].nav_rep;
+        }
+
+        // حفظ اللغة في المتصفح
         localStorage.setItem('preferredLang', lang);
 
-        // تبديل ملف الـ Bootstrap بناءً على اللغة
+        // تبديل ملف الـ Bootstrap بناءً على اللغة (RTL vs LTR)
         if (bootstrapLink) {
             if (lang === 'ar') {
                 bootstrapLink.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css";
@@ -87,13 +97,14 @@ document.addEventListener("DOMContentLoaded", function() {
     if (langBtn) {
         langBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const currentLang = document.documentElement.lang;
-            const nextLang = currentLang === 'ar' ? 'en' : 'ar';
+            // تبديل بين ar و en
+            const currentLang = document.documentElement.lang === 'ar' ? 'ar' : 'en'; 
+            // السطر اللي فوق كان فيه غلطة منطقية بسيطة، نعدلها:
+            const nextLang = document.documentElement.lang === 'ar' ? 'en' : 'ar';
             updateContent(nextLang);
         });
     }
 
-    // 5. تحميل اللغة المحفوظة أو العربية كافتراضي
     const savedLang = localStorage.getItem('preferredLang') || 'ar';
     updateContent(savedLang);
 });

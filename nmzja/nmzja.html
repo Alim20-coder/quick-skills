@@ -3,47 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="ser_4_h">نمذجة معلومات البناء BIM | QSC</title>
+    <title data-i18n="test_page_title">الاختبار والتشغيل Testing & Commissioning | QSC</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
-        :root { --bim-blue: #003366; --bim-cyan: #00d4ff; --main-orange: #ff9f1c; }
+        :root { --test-blue: #0d2235; --test-orange: #ff9f1c; --test-green: #27ae60; }
         body { font-family: 'Cairo', sans-serif; background-color: #ffffff; }
 
-        .bim-hero {
-            background: linear-gradient(135deg, rgba(0, 51, 102, 0.95), rgba(0, 212, 255, 0.4)), 
-                        url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200');
+        /* Hero Section */
+        .test-hero {
+            background: linear-gradient(rgba(13, 34, 53, 0.9), rgba(13, 34, 53, 0.7)), 
+                        url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200');
             background-size: cover;
             background-position: center;
             color: white;
             padding: 120px 0;
-            border-bottom: 5px solid var(--main-orange);
+            border-bottom: 5px solid var(--test-orange);
         }
 
-        .bim-card { background: #ffffff; border: 1px solid #eee; border-radius: 20px; transition: 0.4s; position: relative; z-index: 1; }
-        .bim-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 51, 102, 0.1) !important; }
-        .step-number { position: absolute; top: -15px; right: 20px; background: var(--main-orange); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(255, 159, 28, 0.3); }
-        .text-cyan { color: var(--bim-cyan); }
-        #lang-toggler { position: fixed; top: 20px; left: 20px; z-index: 1000; }
+        .test-card { background: #ffffff; border: 1px solid #eee; border-radius: 20px; transition: 0.4s; position: relative; z-index: 1; }
+        .test-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(13, 34, 53, 0.1) !important; border-color: var(--test-orange); }
+        
+        .status-badge { position: absolute; top: -15px; right: 20px; background: var(--test-green); color: white; padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 0.8rem; box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3); }
+        .text-orange { color: var(--test-orange); }
+        
+        /* Navbar Customization */
+        .text-orange-hover:hover { color: var(--test-orange) !important; transition: 0.3s; }
+        .transition-hover:hover { transform: translateY(-2px); transition: 0.3s; background-color: var(--test-orange); border-color: var(--test-orange); color: #0d2235; }
+        
+        @media (max-width: 991px) {
+            .border-start { border-right: none !important; border-top: 1px solid var(--test-orange); padding-top: 15px; margin-top: 10px; border-left: none !important; }
+            .navbar-nav { text-align: center; }
+        }
     </style>
 </head>
 <body>
-<style>
-    .text-orange-hover:hover { color: #ff9f1c !important; transition: 0.3s; }
-    .transition-hover:hover { transform: translateY(-2px); transition: 0.3s; background-color: #ff9f1c; border-color: #ff9f1c; color: #0d2235; }
-    
-    @media (max-width: 991px) {
-        .border-start { border-right: none !important; border-top: 1px solid #ff9f1c; padding-top: 15px; margin-top: 10px; border-left: none !important; }
-        .navbar-nav { text-align: center; }
-        .navbar-nav li { margin-bottom: 10px; }
-    }
-</style>    
+
 <nav class="navbar navbar-expand-lg sticky-top shadow-sm py-3" style="background-color: #0d2235; border-bottom: 3px solid #ff9f1c;">
     <div class="container">
-        
-        <a class="navbar-brand me-0" href="index.html">
+        <a class="navbar-brand me-0" href="../index.html">
             <img src="../logo.jpeg" alt="Logo" width="50" height="50" class="img-fluid rounded shadow-sm">
         </a>
 
@@ -54,13 +54,13 @@
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-bold d-flex align-items-center">
                 <li class="nav-item px-3">
-                    <a class="nav-link text-white text-orange-hover" href="../index.html">الرئيسية</a>
+                    <a class="nav-link text-white text-orange-hover" href="../index.html" data-i18n="nav_home">الرئيسية</a>
                 </li>
                 <li class="nav-item px-3">
-                    <a class="nav-link text-white text-orange-hover" href="../index.html#services">خدماتنا</a>
+                    <a class="nav-link text-white text-orange-hover" href="../index.html#services" data-i18n="nav_services">خدماتنا</a>
                 </li>
                 <li class="nav-item px-3 mt-2 mt-lg-0">
-                    <button id="lang-toggler" class="btn btn-light btn-sm fw-bold rounded-pill px-3 shadow-sm transition-hover">
+                    <button id="lang-toggler" class="btn btn-light btn-sm fw-bold rounded-pill px-4 shadow-sm transition-hover">
                         English
                     </button>
                 </li>
@@ -72,16 +72,14 @@
                 </div>
             </div>
         </div>
-
     </div>
 </nav>
-    <button id="lang-toggler" class="btn btn-light shadow-sm fw-bold">English</button>
 
-    <header class="bim-hero text-center">
+    <header class="test-hero text-center">
         <div class="container reveal">
-            <h1 class="display-4 fw-black mb-3" data-i18n="bim_hero_title">نمذجة معلومات البناء (BIM)</h1>
-            <p class="lead mb-4" data-i18n="ser_4_p">نحول الرؤى المعمارية إلى واقع رقمي ذكي يقلل التكاليف ويمنع التداخلات قبل بدء التنفيذ.</p>
-            <div class="badge bg-light text-dark p-2 px-4 rounded-pill fw-bold">Building Information Modeling</div>
+            <h1 class="display-4 fw-black mb-3" data-i18n="test_hero_h">الاختبار والتشغيل (Commissioning)</h1>
+            <p class="lead mb-4" data-i18n="test_hero_p">نحن نضمن أن كل صمام، كابل، ومعدة تعمل بدقة 100% وفقاً للتصاميم الهندسية العالمية.</p>
+            <div class="badge bg-light text-dark p-2 px-4 rounded-pill fw-bold" data-i18n="test_badge">Quality Assurance & Control</div>
         </div>
     </header>
 
@@ -89,32 +87,32 @@
         <div class="container py-lg-5">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
-                    <h2 class="fw-bold text-blue mb-4" data-i18n="bim_how_title">كيف نطور مشاريعكم باستخدام تقنية BIM؟</h2>
-                    <p class="text-muted" data-i18n="bim_how_desc">نعتمد في QSC على أحدث البرمجيات مثل (Autodesk Revit, Navisworks) لتوفير دقة متناهية في كافة مراحل المشروع:</p>
+                    <h2 class="fw-bold text-blue mb-4" data-i18n="test_process_h">منهجيتنا في فحص الأنظمة</h2>
+                    <p class="text-muted" data-i18n="test_process_p">عملية الـ Commissioning هي الجسر بين الانتهاء من الإنشاء وبدء التشغيل الفعلي. في QSC، نتبع بروتوكولات صارمة تشمل:</p>
                     
                     <div class="d-flex mb-4 reveal delay-1">
                         <div class="flex-shrink-0 ms-3">
-                            <i class="fas fa-layer-group text-cyan fs-2"></i>
+                            <i class="fas fa-clipboard-check text-orange fs-2"></i>
                         </div>
                         <div>
-                            <h5 class="fw-bold" data-i18n="bim_feat_1_title">منع تعارض الأنظمة (Clash Detection)</h5>
-                            <p class="small text-muted" data-i18n="bim_feat_1_desc">كشف التداخلات بين الأنظمة الكهربائية والميكانيكية والإنشائية قبل الوصول للموقع.</p>
+                            <h5 class="fw-bold" data-i18n="test_feat_1_h">اختبارات ما قبل التشغيل (Pre-commissioning)</h5>
+                            <p class="small text-muted" data-i18n="test_feat_1_p">فحص التوصيلات، معايرة الحساسات، واختبارات الضغط (Hydrotest) لضمان سلامة الشبكات.</p>
                         </div>
                     </div>
 
                     <div class="d-flex mb-4 reveal delay-2">
                         <div class="flex-shrink-0 ms-3">
-                            <i class="fas fa-chart-pie text-cyan fs-2"></i>
+                            <i class="fas fa-microchip text-orange fs-2"></i>
                         </div>
                         <div>
-                            <h5 class="fw-bold" data-i18n="bim_feat_2_title">حصر كميات دقيق 100%</h5>
-                            <p class="small text-muted" data-i18n="bim_feat_2_desc">استخراج جداول الكميات والتكاليف من النموذج الرقمي مباشرة لضمان أقل نسبة هادر.</p>
+                            <h5 class="fw-bold" data-i18n="test_feat_2_h">مزامنة الأنظمة والتحكم آلياً</h5>
+                            <p class="small text-muted" data-i18n="test_feat_2_p">تكامل أنظمة الـ PLC و SCADA لضمان استجابة المعدات للأوامر البرمجية بدقة متناهية.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 reveal">
-                    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=800" class="img-fluid rounded-4 shadow-lg" alt="BIM Modeling">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800" class="img-fluid rounded-4 shadow-lg" alt="Testing and Commissioning">
                 </div>
             </div>
         </div>
@@ -123,38 +121,38 @@
     <section class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5 reveal">
-                <h2 class="fw-bold" data-i18n="bim_dims_title">مستويات العمل (BIM Dimensions)</h2>
-                <p class="text-muted" data-i18n="bim_dims_desc">نقدم حلولاً تبدأ من التصميم ثلاثي الأبعاد وصولاً لإدارة المرافق.</p>
+                <h2 class="fw-bold" data-i18n="test_types_h">خدمات الفحص المتخصصة</h2>
+                <p class="text-muted" data-i18n="test_types_p">نغطي كافة التخصصات لضمان تسليم مشروع متكامل الأركان.</p>
             </div>
 
             <div class="row g-4">
                 <div class="col-md-4 reveal delay-1">
-                    <div class="card bim-card h-100 p-4 shadow-sm border-0">
-                        <div class="step-number">3D</div>
-                        <h4 class="fw-bold mt-3 mb-3" data-i18n="bim_3d_title">النمذجة والتمثيل البصري</h4>
-                        <p class="text-muted small" data-i18n="bim_3d_desc">إنشاء نماذج رقمية دقيقة تحتوي على كافة المعلومات الهندسية للمشروع.</p>
+                    <div class="card test-card h-100 p-4 shadow-sm border-0">
+                        <div class="status-badge">Mechanical</div>
+                        <h4 class="fw-bold mt-3 mb-3" data-i18n="test_mech_h">الاختبارات الميكانيكية</h4>
+                        <p class="text-muted small" data-i18n="test_mech_p">اختبار أداء المضخات، الغلايات، والمحركات، والتأكد من عدم وجود اهتزازات غير طبيعية.</p>
                     </div>
                 </div>
 
                 <div class="col-md-4 reveal delay-2">
-                    <div class="card bim-card h-100 p-4 shadow-sm border-0">
-                        <div class="step-number">4D</div>
-                        <h4 class="fw-bold mt-3 mb-3" data-i18n="bim_4d_title">الجدولة الزمنية (Time)</h4>
-                        <p class="text-muted small" data-i18n="bim_4d_desc">ربط العناصر الإنشائية بالجدول الزمني لمتابعة تسلسل التنفيذ بدقة.</p>
+                    <div class="card test-card h-100 p-4 shadow-sm border-0">
+                        <div class="status-badge">Electrical</div>
+                        <h4 class="fw-bold mt-3 mb-3" data-i18n="test_elec_h">الاختبارات الكهربائية</h4>
+                        <p class="text-muted small" data-i18n="test_elec_p">قياس الأحمال، اختبار العزل للكابلات، وفحص لوحات الجهد المتوسط والمنخفض.</p>
                     </div>
                 </div>
 
                 <div class="col-md-4 reveal delay-3">
-                    <div class="card bim-card h-100 p-4 shadow-sm border-0">
-                        <div class="step-number">5D</div>
-                        <h4 class="fw-bold mt-3 mb-3" data-i18n="bim_5d_title">تقدير التكاليف (Cost)</h4>
-                        <p class="text-muted small" data-i18n="bim_5d_desc">حساب دقيق للتكاليف والتدفقات النقدية بناءً على حجم العمل الفعلي.</p>
+                    <div class="card test-card h-100 p-4 shadow-sm border-0">
+                        <div class="status-badge">Piping</div>
+                        <h4 class="fw-bold mt-3 mb-3" data-i18n="test_piping_h">اختبارات الأنابيب</h4>
+                        <p class="text-muted small" data-i18n="test_piping_p">اختبار الضغط المائي والهوائي (Hydro & Pneumatic) وتطهير الخطوط قبل التشغيل.</p>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-5 reveal">
-                <a href="https://wa.me/966534656881" class="btn btn-primary bg-blue fw-bold px-5 py-3 rounded-pill border-0" data-i18n="bim_cta_btn">اطلب نموذجاً لمشروعك الآن</a>
+                <a href="https://wa.me/966534656881" class="btn btn-dark fw-bold px-5 py-3 rounded-pill border-0 transition-hover" data-i18n="test_cta">اطلب فريق الفحص والتشغيل</a>
             </div>
         </div>
     </section>
