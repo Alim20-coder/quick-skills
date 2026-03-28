@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nav_contact: "تواصل معنا",
       hero_subtitle: "للمقاولات وخدمات خطوط الانابيب",
       hero_desc:
-        "شركة متخصصة في تنفيذ وخدمات خطوط الانابيب- اعمال اللحامات والعزل الداخلي والخارجي للانابيب واختبارات الضغط والتشغيل- اعمال الاصلاحات والدعم الفني - تدريب وتأهيل الكوادر الفنية من مهندسين وبرادين ولحامين",
+        "شركة متخصصة في تنفيذ وخدمات خطوط الانابيب- اعمال اللحامات والعزل الداخلي والخارجي للانابيب واختبارات الضغط والتشغيل- اعمال الاصلاحات والدعم الفني - تدريب وتأهيل الكوادر الفنية من مهندسين ومصنعين ولحامين",
       hero_btn_quote: "اطلب عرض سعر",
       hero_btn_services: "خدماتنا",
       about_title: "عن الشركة",
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nav_contact: "Contact Us",
       hero_subtitle: " for contracting and pipeline services",
       hero_desc:
-        "A company specializing in pipeline construction and services – including welding, internal and external pipe insulation, pressure and commissioning tests, repair work, technical support, and training and qualification of technical personnel such as engineers, plumbers, and welders.",
+        "A company specializing in pipeline construction and services – including welding , internal and external pipe insulation , pressure and commissioning tests , repair work , technical support , training and qualification of technical personnel such as engineers, fabricators , welders.",
       hero_btn_quote: "Get a Quote",
       hero_btn_services: "Our Services",
       about_title: "About Us",
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Implementation of external coating (HSS and cold wrapping), internal coating (liquid epoxy and FBE powder coating).",
       ser_testing_h: "Testing & Commissioning",
       ser_testing_p:
-        "Performing pressure and hydro testing for pipeline and piping networks up to 200 bars, ensuring tje safety and efficiency of systems respecting quality deliverables to the client.",
+        "Performing pressure and hydro testing for pipeline and piping networks up to 200 bars, ensuring The safety and efficiency of systems respecting quality deliverables to the client.",
       ser_repair_h: "Repairing & Tech Support",
       ser_repair_p:
         "Quick engineering repair solutions and specialized technical support for project sites.",

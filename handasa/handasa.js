@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function() {
             dir: "rtl", // إضافة الاتجاه
             nav_home: "الرئيسية",
             nav_services: "خدماتنا",
-            brand_name: "Quick Skills",
+            brand_name: "Quality Skills",
             inf_hero_title: "المقاولات العامة والبنية التحتية",
-            inf_hero_desc: "نضع الأساس المتين للمستقبل.. تنفيذ شبكات الطرق والمرافق بأعلى معايير الجودة.",
+            inf_hero_desc: "نضع الأساس المتين للمستقبل.. تنفيذ شبكات الأنابيب وخطوط الأنابيب والمرافق بأعلى معايير الجودة.",
             inf_roads_title: "شبكات الطرق والأسفلت",
             inf_roads_desc: "تمهيد ورصف الطرق الداخلية والسريعة، وتجهيز الطبقات الترابية وحماية الميول وفقاً للمواصفات الفنية.",
             inf_water_title: "تمديدات المياه والصرف",
@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
             dir: "ltr", // إضافة الاتجاه
             nav_home: "Home",
             nav_services: "Our Services",
-            brand_name: "Quick Skills",
+            brand_name: "Quality Skills",
             inf_hero_title: "General Contracting & Infrastructure",
-            inf_hero_desc: "Laying a solid foundation for the future.. implementing road networks and utilities with high standards.",
+            inf_hero_desc: "Laying a solid foundation for the future.. implementing piping and pipeline networks and utilities with high standards.",
             inf_roads_title: "Carbon steel Pipeline",
             inf_roads_desc: "District Cooling network , Water transmission pipeline , Oil and gas transmission Pipeline. ",
             inf_water_title: "Water & Sewage Systems",
