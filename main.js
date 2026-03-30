@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "شبكات الأنابيب تنفيذ شبكات أنابيب من الفولاذ الكربوني والفولاذ المقاوم للصدأ للمياه، ومحطات المعالجة، وشبكات التبريد المركزية.",
       ser_coating_h: "الطلاء والعزل",
       ser_coating_p:
-        "تنفيذ الطلاء الخارجي (التغليف بالعزل الحراري)، والطلاء الداخلي (الإيبوكسي السائل وطلاء مسحوق FBE).",
+        "تنفيذ الطلاء الخارجي (التغليف بالعزل الحراري والتغليف البارد)، والطلاء الداخلي (الإيبوكسي السائل وطلاء مسحوق FBE).",
       ser_testing_h: "الاختبار والتشغيل",
       ser_testing_p:
         "إجراء اختبارات الضغط والهيدروليك لخطوط الأنابيب وشبكات الأنابيب حتى 200 بار، وضمان سلامة وكفاءة الأنظمة مع مراعاة جودة المخرجات المقدمة للعميل.",
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Piping networks Implementation of carbon steel and stainless steel piping networks for water, treatment planets and district cooling networks.",
       ser_coating_h: "Internal & External Coating",
       ser_coating_p:
-        "Implementation of external coating (Thermal insulation packaging), internal coating (liquid epoxy and FBE powder coating).",
+        "Implementation of external coating (Thermal insulation packaging and Cold packaging ), internal coating (liquid epoxy and FBE powder coating).",
       ser_testing_h: "Testing & Commissioning",
       ser_testing_p:
         "Performing pressure and hydro testing for pipeline and piping networks up to 200 bars, ensuring The safety and efficiency of systems respecting quality deliverables to the client.",
